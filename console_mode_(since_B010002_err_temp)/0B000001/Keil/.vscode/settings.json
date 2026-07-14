@@ -1,0 +1,7 @@
+{
+  "debug.hideSlowPreLaunchWarning": true,
+  "clangd.arguments": [
+    "--compile-commands-dir=d:\\Matt Work\\Development\\Project\\02_SensminiA4Neo\\Firmware\\0B000001\\Keil\\out\\sensminiA4Neo\\Release"
+  ],
+  "cmake.sourceDirectory": "D:/Matt Work/Development/Project/02_SensminiA4Neo/Firmware/0B000001/Keil/tmp/sensminiA4Neo+Release"
+}

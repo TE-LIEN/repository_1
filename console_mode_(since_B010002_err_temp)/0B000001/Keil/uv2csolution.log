@@ -1,0 +1,10 @@
+1 out of 1 target(s) converted
+Created solution: D:/Matt Work/Development/Project/02_SensminiA4Neo/Firmware/0B000001/Keil/sensminiA4Neo.csolution.yml
+With projects:
+- D:/Matt Work/Development/Project/02_SensminiA4Neo/Firmware/0B000001/Keil/sensminiA4Neo.cproject.yml
+Error: 0 error(s), 1 warning(s):
+Warnings:
+	The target "Release" is configured with following user commands which should be run manually:
+            After Build/Rebuild
+                fromelf --bin ".\Objects\@L.axf" --output ".\Objects\@L.bin"
+                fromelf --text -c ".\Objects\@L.axf" --output ".\Objects\@L.txt"

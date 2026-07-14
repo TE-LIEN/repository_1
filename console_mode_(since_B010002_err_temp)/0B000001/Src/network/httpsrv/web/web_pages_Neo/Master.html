@@ -1,0 +1,2227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Configuration</title>
+		<!--<h1 style="text-align: center; font-size:32px;">SensMini A4 Neo Configuration Tool</h1>-->
+		<!--<link href="style.css" rel="stylesheet" type="text/css" />-->
+		<style>
+			body{
+				margin:0;
+				padding:0;
+				font: bold 11px/1.5em Verdana;
+			}
+			h2 {
+				font: bold 14px Verdana, Arial, Helvetica, sans-serif;
+				color: #000;
+				margin: 0px;
+				padding: 0px 0px 0px 15px;
+			}
+			#tabs {
+				float:left;
+				width:100%;
+				background:#BBD9EE;
+				font-size:93%;
+				line-height:normal;
+			}
+			#tabs ul {
+				margin:0;
+				padding:10px 10px 0 50px;
+				list-style:none;
+			}
+			#tabs li {
+				display:inline;
+				margin:0;
+				padding:0;
+			}
+			#tabs a {
+				float:left;
+				background:url("tableft.gif") no-repeat left top;
+				margin:0;
+				padding:0 0 0 4px;
+				text-decoration:none;
+			}
+			#tabs a span {
+				float:left;
+				display:block;
+				background:url("tabright.gif") no-repeat right top;
+				padding:5px 15px 4px 6px;
+				color:#666;
+			}
+			#tabs a span {float:none;}
+			#tabs a:hover span {
+				color:#FF9834;
+			}
+			#tabs a:hover {
+				background-position:0% -42px;
+			}
+			#tabs a:hover span {
+				background-position:100% -42px;
+			}
+			#tabs #current a {
+				background-position:0% -42px;
+			}
+			#tabs #current a span {
+				background-position:100% -42px;
+			}
+			.accordion {
+				background-color: #eee;
+  			color: #000;
+  			cursor: pointer;
+  			padding: 4px;
+  			width: 100%;
+  			border: none;
+  			text-align: left;
+  			outline: none;
+  			font-size: 18px;
+  			transition: 0.4s;
+			}
+			.active, .accordion:hover {
+  			background-color: #ccc; 
+			}
+			.accordion:after {
+  			content: '\002B';
+  			color: #777;
+  			font-weight: bold;
+  			float: right;
+  			margin-left: 5px;
+			}
+			.active:after {
+  			content: "\2212";
+			}
+			.paramPanel {
+  			padding: 0 18px;
+  			background-color: white;
+  			overflow: hidden;
+  			max-height: 0px;
+				transition: max-height 0.4s ease-out;
+			}
+			.pqRtIdx	{
+				background-color: #97CBFF;
+				width: 20px;
+				text-align:center;
+			}
+			.pqRtVal	{
+				width: 20%;
+				text-align:center;
+			}
+			.blueCenter{
+				background-color: #97CBFF;
+				text-align:center;
+			}
+			.blueLeft{
+				background-color: #97CBFF;
+				text-align:left;
+			}
+			#downloadDialog {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: rgba(0, 0, 0, 0.8);
+				color: white;
+				padding: 20px;
+				border-radius: 10px;
+				text-align: center;
+				font-size: 20px;
+				z-index: 1000;
+			}
+			.spinner {
+				margin-top: 10px;
+				width: 40px;
+				height: 40px;
+				border: 4px solid rgba(255, 255, 255, 0.3);
+				border-radius: 50%;
+				border-top-color: #fff;
+				animation: spin 1s ease-in-out infinite;
+			}
+			@keyframes spin {
+				to { transform: rotate(360deg); }
+			}
+		</style>
+		<!--<script src="General.js" type="text/javascript"></script>-->
+		<!--<script src="Tab0.js" type="text/javascript"></script>-->
+		<!--<script src="Tab1.js" type="text/javascript"></script>-->
+		<!--<script src="Tab2.js" type="text/javascript"></script>-->
+		<!--<script src="Tab3.js" type="text/javascript"></script>-->
+		<!--<script src="Tab4.js" type="text/javascript"></script>-->
+		<!--<script src="Tab5.js" type="text/javascript"></script>-->
+		<script type="text/javascript">
+			var is_lan_alive  = 1;
+			var	data_received = 0;
+			var day_count = 0;
+			var UTC_Local = 1;
+			var inner_autorun;
+			var inner_power;
+			var DTTimer, RTValue, DBGTimer, rspTimeout;
+			var DtTimerStop=true;
+			var showdata;
+			var unauthorized=false;
+			var login_ok = 0;
+			var TCP_Status = "";
+			var imgLen, imgBin;
+			var imgName, imgPos;
+			var imgMode=0;
+			var imgGetGuid=0;
+			var imgIdx=0;
+			var imgDlLen=1024;
+			var initDone=0;
+			var imgSrvType=0;
+			var pqTbCreated = 0;
+			var isSu=0;
+			<!--window.onload = Tab0Clicked;-->
+			var csvday = "";
+			<!--var UTC_Date;-->
+			var pom = document.createElement('a');
+			
+			document.addEventListener('DOMContentLoaded', function() {
+				var downloadDialog = document.createElement('div');
+				downloadDialog.id = 'downloadDialog';
+				downloadDialog.innerHTML = 'Downloading...<div class="spinner"></div>';
+				document.body.appendChild(downloadDialog);
+			});
+		</script>
+	</head>
+	<body>
+		<h1 style="text-align: center; font-size:32px;">SensMini A4 Neo Configuration Tool</h1>
+		<div id="tabs">
+			<ul>
+				<li><a href="#Tab0" onclick="Tab0Clicked()"><span>Login</span></a></li>
+				<li><a href="#Tab1" onclick="Tab1Clicked()"><span>Basic parameters</span></a></li>
+				<li><a href="#Tab2" onclick="Tab2Clicked()"><span>Device settings</span></a></li>
+				<li><a href="#Tab3" onclick="Tab3Clicked()"><span>Coefficient settings</span></a></li>
+				<li><a href="#Tab4" onclick="Tab4Clicked()"><span>Channel values</span></a></li>
+				<li><a href="#Tab5" onclick="Tab5Clicked()"><span>Update firmware</span></a></li>
+			</ul>
+		</div>
+		<div style="width:950px; margin:0 auto;">
+			<div id="Tab0" style="width:100%;">
+				<form id="form1" name="form1" method="post" action="" >
+					<table id="username_Setting" border="0" style="width: 100%;">
+						<caption><br><h1>Sign In</h1><br></caption>
+						<tbody>
+						<br><br>
+							<tr>
+								<td width = 50% style="text-align:right;">Account:</td>
+								<td><input type="text" name="autorun" onkeyup="inputKeyUp(event)"/></td>
+							</tr>
+							<tr>
+								<td width = 50% style="text-align:right;">Password:</td>
+								<td><input type="password" name="power" onkeyup="inputKeyUp(event)"/></td>
+							</tr>
+							<tr>
+								<td colspan=2 width = 800px style="text-align:center; font-size:10px; color:white">AnaSystem</td>
+							</tr>
+							<tr>
+								<td colspan=2 width = 800px style="text-align:center;"><button type="button" value="LOGIN" onclick="check();">LOGIN</button></td>
+							</tr>
+							<tr>
+								<td colspan=2 width = 800px style="text-align:center; font-size:10px; color:white">AnaSystem</td>
+							</tr>
+							<tr>
+								<td colspan=2 width = 800px style="text-align:center; font-size:21px; color:blue">Renew Existing User Password</td>
+							</tr>
+							<tr>
+								<td colspan=2 width = 800px style="text-align:center; font-size:10px; color:white">AnaSystem</td>
+							</tr>
+							<tr>
+								<td width = 50% style="text-align:right;">New account:</td>
+								<td><input type="text" id="mod_account" disabled = true name="new_username" class="keyup1"/></td>
+							</tr>
+							<tr>
+								<td width = 50% style="text-align:right;">New password:</td>
+								<td><input type="password" id="mod_password" disabled = true name="new_password" class="keyup1"/></td>
+							</tr>
+							<tr>
+								<td width = 50% style="text-align:right;">Confirm password:</td>
+								<td><input type="password" id="mod_confirm" disabled = true name="confirm_password" class="keyup1"/></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+				<br>
+				<div style="text-align:center;">
+					<input type="reset" id="mod_reset" disabled=true value="RESET" onclick="reset_password();"/>
+				</div>
+				<br><br>
+			</div>
+			<!--------------------------Tab1----------------------------------->
+			<div id="Tab1" style="width:100%;">
+			<br><br><br><br>
+				<fieldset>
+					<legend style="font-size:18px;">Device Status</legend>
+					<table border="0" style="width: 100%;">
+						<tbody bgcolor="PowderBlue">
+							<tr>
+								<td width=40%>4G registration status/signal strength</td>
+								<td width=40% id="Wireless_state" bgcolor = "#9CFFFF">NaN</td>
+								<td width=20% ></td>
+							</tr>
+							<tr>
+								<td>4G auto assigned IP</td>
+								<td id="Client_IP" bgcolor = "#9CFFFF">0.0.0.0</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>NB-IoT registration status/signal strength</td>
+								<td id="NBIOT_state" bgcolor = "#9CFFFF">NaN</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>NB-IoT auto assigned IP</td>
+								<td id="NB_Client_IP" bgcolor = "#9CFFFF">0.0.0.0</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Current Power saving Status</td>
+								<td id="currPsmSts" bgcolor = "#9CFFFF">Disable</td>
+								<td></td>
+							</tr>
+							
+							<tr>
+								<td>Computer time</td>
+								<td id="localTime" bgcolor = "#9CFFFF">0.0.0 00:00:00</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Device time(UTC time)</td>
+								<td id="dvTime" bgcolor = "#9CFFFF">0.0.0 00:00:00</td>
+								<td>
+									<button style="width:80%;background-color:yellow;" onclick="SyncDateTime()"><strong>Sync Time</strong></button>
+									<!--<button style="width:50%;background-color:yellow;" onclick="SyncDateTime1()"><strong>Local time</strong></button>-->
+								</td>
+							</tr>
+							<tr>
+								<td>Temporary disable sleep mode remain time</td>
+								<td id="slpRemainTime" bgcolor = "#9CFFFF">00:00</td>
+								<td>
+									<button style="width:40%;background-color:yellow;" onclick="temporarySleep(1)"><strong>enable</strong></button>
+									<button style="width:50%;background-color:yellow;" onclick="temporarySleep(0)"><strong>disable</strong></button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<br><br>
+				<table border="2" style="width: 100%;">
+					<caption><br><h1>System Parameter Settings</h1><br></caption>
+					<tbody>
+						<tr>
+							<td colspan=3 bgcolor = "PowderBlue" width = 800px style="text-align:left; font-size:15px;">System</td>
+						</tr>
+						<tr>
+							<td>Recording interval(min)</td>
+							<td>
+								<select id="mod_rec_sec" style="width: 100%;">
+									<option value="60">1</option>
+									<option value="300">5</option>
+									<option value="600">10</option>
+									<option value="1800">30</option>
+									<option value="3600">60</option>
+									<option value="21600">360</option>
+									<option value="43200">720</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Autosend interval(sec)</td>
+							<td>
+								<select id="mod_autosend_sec" style="width: 100%;">
+									<option value="20">20</option>
+									<option value="30">30</option>
+									<option value="40">40</option>
+									<option value="50">50</option>
+									<option value="60">60</option>
+								</select>
+							</td>
+						</tr>
+						<!--<tr>-->
+							<!--<td>Sleeping interval(multiple recording interval)</td>-->
+							<!--<td>-->
+								<!--<select id="mod_sleep_times" style="width: 100%;">-->
+									<!--<option value="0">0</option>-->
+									<!--<option value="1">1</option>-->
+								<!--</select>-->
+							<!--</td>-->
+						<!--</tr>-->
+						<tr>
+							<td>Wake-up elapsed time(sec)</td>
+							<td>
+								<select id="mod_Weak_Up_Interval" style="width: 100%;">
+									<option value="30">30</option>
+									<option value="60">60</option>
+									<option value="90">90</option>
+									<option value="120">120</option>
+									<option value="150">150</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Bat. LVD threshold(V)</td>
+							<td><input type="text" id="mod_bat_off" style="width: 99%;" class="keyup2"/></td>
+						</tr>
+						<tr>
+							<td>Bat. LVD wake-up difference(V)</td>
+							<td><input type="text" id="mod_bat_on_diff" style="width: 99%;" class="keyup2"/></td>
+						</tr>
+						<!--<tr>-->
+							<!--<td>Ext LVD Power Saving </td>-->
+							<!--<td align="left">-->
+								<!--<input type="checkbox" value="1" id="extLvdOn">Enable-->
+								<!--<input type="text" id="extLvdLevel" style="width: 80%;" class="keyup2">-->
+							<!--</td>-->
+						<!--</tr>-->
+						<tr>
+							<td>Power saving mode</td>
+							<td align="center">
+								<select id="pwrSaving" onchange="PowerSaveSel()" style="width:100%">
+									<option value="0">Disable</option>
+									<option value="1">Normal Power Saving</option>
+									<option value="2">Adv. Power Saving</option>
+								</select>
+							</td>
+						</tr>
+						<!--<tr>-->
+							<!--<td>DI status record</td>-->
+							<!--<td align="left">-->
+								<!--<input type="radio" name="DIS1" id="di_status_Yes" value=1 />Enable-->
+								<!--<input type="radio" name="DIS1" id="di_status_No"  value=0 />Disable-->
+							<!--</td>-->
+						<!--</tr>-->
+						<tr>
+							<td>Log messages record</td>
+							<td align="left">
+								<input type="radio" name="HIS1" id="History_record_Yes" value=1 />Enable
+								<input type="radio" name="HIS1" id="History_record_No"  value=0 />Disable
+							</td>
+						</tr>
+						<!--<tr>-->
+							<!--<td>DI trigger</td>-->
+							<!--<td align="left">-->
+								<!--<input type="checkbox" value="1" id="DI0_Wakeup" disabled>DI 0-->
+								<!--<input type="checkbox" value="1" id="DI1_Wakeup" disabled>DI 1-->
+							<!--</td>-->
+						<!--</tr>-->
+						<tr>
+							<td>Alert threshold</td>
+							<td align="left">
+								<input type="checkbox" value="1" id="alerton" disabled>Enable
+								<input type="text" id="alerton_level" style="width: 80%;" class="keyup2">
+							</td>
+						</tr>
+						<tr>
+							<td>Engineering Mode (Always On & 1 Min Record)</td>
+							<td align="left">
+								<input type="radio" name="RG11" id="sewerImEn" value=1 />Enable
+								<input type="radio" name="RG11" id="sewerImDis"  value=0 />Disable
+							</td>
+						</tr>
+						<tr>
+							<td>Auto FOTA check</td>
+							<td align="left">
+								<input type="radio" name="RG12" id="autoFotaEn" value=1 />Enable
+								<input type="radio" name="RG12" id="autoFotaDis" value=0 />Disable
+							</td>
+						</tr>
+						<tr>
+							<td>Time-lapse Camera Upload Server</td>
+							<td>
+								<select id="imageServer" style="width: 100%;">
+									<option value="0">Default</option>
+									<option value="1">Indonesia (https://device.senslink.id)</option>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<table border="2" style="width: 100%;">
+					<caption><br><h1>Network Parameter Settings</h1><br></caption>
+					<tbody>
+						<tr>
+							<td colspan=3 bgcolor = "PowderBlue" width = 800px style="text-align:left; font-size:15px;">Network</td>
+						</tr>
+						<tr>
+							<td>Priority connection</td>
+							<td align="left">
+								<input type="radio" name="LAN_MOB" id="Mode_LAN" value=1>LAN
+								<input type="radio" name="LAN_MOB" id="Mode_MOB" value=2>Mobile
+							</td>
+						</tr>
+						<tr>
+							<td colspan=3 bgcolor = "PowderBlue" width = 800px style="text-align:left; font-size:15px;">Wired network</td>
+						</tr>
+						<tr>
+							<td>IP address</td>
+							<td><input type="text" id="mod_ip_addr" style="width: 99%;"></td>
+						</tr>
+						<tr>
+							<td>IP mask</td>
+							<td><input type="text" id="mod_ip_mask" style="width: 99%;"></td>
+						</tr>
+						<tr>
+							<td>Gateway</td>
+							<td><input type="text" id="mod_ip_gateway" style="width: 99%;"></td>
+						</tr>
+						<tr>
+							<td>DNS</td>
+							<td><input type="text" id="modIpDns" style="width: 99%;"></td>
+						</tr>
+						<tr>
+							<td>Wired MDVPN type</td>
+							<td>
+								<select id="ethMdvpnType" onchange="otaSel(this, 1)" style="width: 100%;">
+									<option value="0">None</option>
+									<option value="1">Senslink MDVPN</option>
+									<option value="2">Other MDVPN</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td colspan=3 bgcolor = "PowderBlue" width = 800px style="text-align:left; font-size:15px;">Wireless network</td>
+						</tr>
+						<tr>
+							<td>High speed module</td>
+							<td>
+								<select id="mod_comm_module" onchange="setHsDisp(this)" style="width: 100%;">
+									<option value="99">No module</option>
+									<option value="0">Cellular Module(3G/4G/NB-IoT/CAT-M1)</option>
+									<!--<option hidden="hidden" value="4">NB-IoT(SARA-R410M)</option>-->
+									<!--<option hidden="hidden" value="6">NB-IoT(TELIT-ME310G)</option>-->
+									<!--<option hidden="hidden" value="7">3G/4G(TELIT-LE910C1)</option>-->
+									<!--<option hidden="hidden" value="9">LoRaWan</option>-->
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Low speed module</td>
+							<td>
+								<select id="mod_comm_module1" onchange="setLsDisp(this)" style="width: 100%;">
+									<option value="99">No module</option>
+									<option value="4">Cellular Module(NB-IoT/CAT-M1)</option>
+									<!--<option value="6">NB-IoT(TELIT-ME310G)</option>-->
+									<!--<option hidden="hidden" value="8">WI-SUN(MESH ROOT)</option>-->
+									<!--<option hidden="hidden" value="9">LoRaWan</option>-->
+									<!--<option hidden="hidden" value="10">LoRa P2P</option>-->
+									<option value="5">GPS</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Mobile on/off interval(multiple recording interval)</td>
+							<td>
+								<select id="mod_Mobile_interval" style="width: 100%;">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="10">10</option>
+									<option value="12">12</option>
+									<option value="24">24</option>
+									<option value="36">36</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>LTE MDVPN type</td>
+							<td>
+								<select id="lteMdvpnType" onchange="otaSel(this, 0)" style="width: 100%;">
+									<option value="0">None</option>
+									<option value="1">Senslink MDVPN</option>
+									<option value="2">Other MDVPN</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>APN(3G/4G)</td>
+							<td><input type="text" id="mod_Senslink_APN" style="width: 99%;" maxlength="30" class="keyup3"></td>
+						</tr>
+						<tr>
+							<td>APN(NB-IoT/CAT-M1)</td>
+							<td><input type="text" id="mod_Senslink_APN_NB" style="width: 99%;" maxlength="30" class="keyup3"></td>
+						</tr>
+						<tr>
+							<td>PLMN(NB-IoT/CAT-M1)</td>
+							<td><input type="text" id="mod_Senslink_PLMN" style="width: 99%;" maxlength="30" class="keyup0"></td>
+						</tr>
+						<tr style="display:none">
+							<td>SIM account (3G/4G)</td>
+							<td><input type="text" id="mod_SIMAccount" style="width: 99%;" maxlength="30" class="keyup4"></td>
+						</tr>
+						<tr style="display:none">
+							<td>SIM password (3G/4G)</td>
+							<td><input type="text" id="mod_SIMPassword" style="width: 99%;" maxlength="16" class="keyup4"></td>
+						</tr>
+						<tr style="display:none">
+							<td>SIM authentication (3G/4G)</td>
+							<td>
+								<select id="mod_SIMAuthentication" style="width: 100%;">
+									<option value="0">none</option>
+									<option value="1">PAP</option>
+									<option value="2">CHAP</option>
+								</select>
+							</td>
+						</tr>
+						<tr style="display:none">
+							<td>on Board Wisun Root</td>
+							<td align="left">
+								<input type="radio" name="onBaordWisun" id="En_OnBoardWisun" value=1 onClick="onboardWisunClick(1)"/>Enable
+								<input type="radio" name="onBaordWisun" id="Dis_OnBoardWisun" value=0 onClick="onboardWisunClick(0)"/>Disable
+							</td>
+						</tr>
+						<tr>
+							<td colspan=3 bgcolor = "PowderBlue" width = 800px style="text-align:left; font-size:15px;">AGPS settings</td>
+						</tr>
+						<tr>
+							<td>AGPS (TELIT MODULE)</td>
+							<td align="left">
+								<input type="radio" name="AGPS" id="EN_AGPS" value=1 onClick="agpsSel(EN_AGPS.value)"/>Enable
+								<input type="radio" name="AGPS" id="DIS_AGPS" value=0 onClick="agpsSel(DIS_AGPS.value)"/>Disable
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<button class="accordion" style="display:none" id=otaBoard>OTA Settings</button>
+				<div class="paramPanel" id="otaPanel">
+					<table id="otaTb" border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>OTA Server IP / Domain name</td>
+								<td><input type="text" id="otaIp" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>OTA Server Port</td>
+								<td><input type="text" id="otaPort" style="width: 99%;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<button class="accordion" style="display:none" id=agpsBoard>Agps Settings</button>
+				<div class="paramPanel" id="agpsPanel">
+					<table id="agpsTb" border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>TELIT ME310G1-WW GNSS system</td>
+								<td>
+									<select id="nbAgpsSys" style="width: 100%;">
+										<option value="0">Auto</option>
+										<option value="1">GPS+GLONASS</option>
+										<option value="2">GPS+GALILEO</option>
+										<option value="3">GPS+BeiDou</option>
+										<option value="4">GPS+QZSS</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>TELIT ME310G1-WW AGPS Cold start timeout(sec)</td>
+								<td>
+									<select id="coldStart" style="width: 100%;">
+										<option value="30">30</option>
+										<option value="40">40</option>
+										<option value="50">50</option>
+										<option value="60">60</option>
+										<option value="120">120</option>
+										<option value="180">180</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>TELIT ME310G1-WW AGPS Hot/Warm start timeout(sec)</td>
+								<td>
+									<select id="hotStart" style="width: 100%;">
+										<option value="10">10</option>
+										<option value="15">15</option>
+										<option value="20">20</option>
+										<option value="25">25</option>
+										<option value="30">30</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>TELIT ME310G1-WW AGPS polling interval(sec)</td>
+								<td>
+									<select id="agpsInterval" style="width: 100%;">
+										<option value="30">30</option>
+										<option value="40">40</option>
+										<option value="50">50</option>
+										<option value="60">60</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>TELIT LE910C1 GNSS system</td>
+								<td>
+									<select id="lteAgpsSys" style="width: 100%;">
+										<option value="0">GNSS ALL</option>
+										<option value="1">GPS+BeiDou</option>
+										<option value="2">GPS+BeiDou+GALILEO</option>
+										<option value="3">GPS+GLONASS+BeiDou</option>
+										<option value="4">GPS+GALILEO</option>
+										<option value="5">GPS+GLONASS</option>
+										<option value="6">GPS+GLONASS+GALILEO</option>
+										<option value="7">GPS</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>TELIT LE910C1 SUPL Server</td>
+								<td><input type="text" id="suplServ" style="width: 99%;"></td>
+							</tr>
+							<tr id="le910SuplPortRow">
+								<td>TELIT LE910C1 SUPL Server Port</td>
+								<td><input type="text" id="suplServPort" style="width: 99%;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<button class="accordion" style="display:none" id=loraWanBoard>LoRa-Wan Network Settings</button>
+				<div class="paramPanel" id="loraWanPanel">
+					<table id="loraWanTb" border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>LoRaWan Ch0 Frequency</td>
+								<td><input type="text" id="rolaWanFreq" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>LoRaWan DEV EUI</td>
+								<td><input type="text" id="rolaWanDevEui" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>LoRaWan APP EUI</td>
+								<td><input type="text" id="rolaWanAppEui" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>LoRaWan APP KEY</td>
+								<td><input type="text" id="rolaWanAppKey" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>LoRaWan DEV ADDR</td>
+								<td><input type="text" id="rolaWanDevAddr" style="width: 99%;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<button class="accordion" style="display:none" id=meshBoard>Mesh Node Network Settings</button>
+				<div class="paramPanel" id="meshPanel">
+					<table id="meshTb" border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>Number of Wi-sun nodes / LoRa P2P slave</td>
+								<td><input type="text" id="wisunNodeCount" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>PQ count per Wi-sun node / LoRa P2P slave</td>
+								<td><input type="text" id="pqCountPerNode" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>Wi-sun Net Name(max 32 character)</td>
+								<td><input type="text" id="wisunNetName" style="width: 99%;" maxlength="32"></td>
+							</tr>
+							<tr>
+								<td>Wi-sun scan start freq</td>
+								<td><input type="text" id="wisunFreq" style="width: 99%;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<table border="2" style="width: 100%;">
+					<caption><br><h1>Server Parameter Settings</h1><br></caption>
+					<tbody>
+						<tr>
+							<td colspan=3 bgcolor = "PowderBlue" width = 800px style="text-align:left; font-size:15px;">Cloud communication</td>
+						</tr>
+						<tr>
+							<td>Senslink/MQTT server_1 IP</td>
+							<td><input type="text" id="mod_Senslink_Address" style="width: 99%;"></td>
+						</tr>
+						<tr>
+							<td>Senslink/MQTT server_1 port</td>
+							<td><input type="text" id="mod_Senslink_Port" style="width: 99%;" class="keyup0"></td>
+						</tr>
+						<tr>
+							<td>Server Protocol</td>
+							<td>
+								<select id="custoType1" onchange="setCustoTp1(this)" style="width: 100%;">
+									<option value="99">SensTalk</option>
+									<option value="0">MQTT</option>
+									<option value="1">MQTTS</option>
+									<option hidden="hidden" value="2">AnIoT</option>
+									<option hidden="hidden" value="3">Azure IoT</option>
+									<option hidden="hidden" value="4">Avnet IoT</option>
+									<option hidden="hidden" value="5">Things Board MQTT</option>
+									<option hidden="hidden" value="7">I Know Water MQTT</option>
+									<option hidden="hidden" value="8">I Know Water MQTTs</option>
+									<option value="9">SensSewer MQTT</option>
+									<option value="10">SensSewer MQTTs</option>
+									<option value="100">IOA Web Api</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Senslink/MQTT server_2 IP</td>
+							<td><input type="text" id="mod_Senslink_Address2" style="width: 99%;"></td>
+						</tr>
+						<tr>
+							<td>Senslink/MQTT server_2 port</td>
+							<td><input type="text" id="mod_Senslink_Port2" style="width: 99%;" class="keyup0"></td>
+						</tr>
+						<tr>
+							<td>Server Protocol</td>
+							<td>
+								<select id="custoType2" style="width: 100%;" onchange="setCustoTp2(this)">
+									<option value="99">SensTalk</option>
+									<option value="0">MQTT</option>
+									<option value="1">MQTTS</option>
+									<option hidden="hidden" value="2">AnIoT</option>
+									<option hidden="hidden" value="3">Azure IoT</option>
+									<option hidden="hidden" value="4">Avnet IoT</option>
+									<option hidden="hidden" value="5">Things Board MQTT</option>
+									<option hidden="hidden" value="7">I Know Water MQTT</option>
+									<option hidden="hidden" value="8">I Know Water MQTTs</option>
+									<option value="9">SensSewer MQTT</option>
+									<option value="10">SensSewer MQTTs</option>
+									<option value="100">IOA Web Api</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<button class="accordion" style="display:none" id=srv1Board>Server 1 Settings</button>
+				<div class="paramPanel" id="srv1Panel">
+					<table id="srv1Tb" border="2" style="width: 100%;">
+						<tbody>
+							<tr id="Mqtt1Row1">
+								<td id="mqtt0CliId">MQTT Device name / Client Id</td>
+								<td><input type="text" id="mqttdevname1" style="width: 99%;"></td>
+							</tr>
+							<tr id="Mqtt1Row2">
+								<td id="mqtt0Name">MQTT Username</td>
+								<td><input type="text" id="mqttusername1" style="width: 99%;"></td>
+							</tr>
+							<tr id="Mqtt1Row3">
+								<td>MQTT Password</td>
+								<td><input type="text" id="mqttpassword1" style="width: 99%;"></td>
+							</tr>
+							<tr id="Mqtt1Row4">
+								<td>MQTT Publish Topic</td>
+								<td><input type="text" id="mqttPubTopic1" style="width: 99%;"></td>
+							</tr>
+							<tr id="Mqtt1Row5">
+								<td>MQTT Subscribe Topic</td>
+								<td><input type="text" id="mqttSubTopic1" style="width: 99%;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<button class="accordion" style="display:none" id=srv2Board>Server 2 Settings</button>
+				<div class="paramPanel" id="srv2Panel">
+					<table id="srv2Tb" border="2" style="width: 100%;">
+						<tbody>
+							<tr id="Mqtt2Row1">
+								<td id="mqtt1CliId">MQTT Device name / Client Id</td>
+								<td><input type="text" id="mqttdevname2" style="width: 99%;"></td>
+							</tr>
+							<tr id="Mqtt2Row2">
+								<td id="mqtt1Name">MQTT Username</td>
+								<td><input type="text" id="mqttusername2" style="width: 99%;"></td>
+							</tr>
+							<tr id="Mqtt2Row3">
+								<td>MQTT Password</td>
+								<td><input type="text" id="mqttpassword2" style="width: 99%;"></td>
+							</tr>
+							<tr id="Mqtt2Row4">
+								<td>MQTT Public Topic</td>
+								<td><input type="text" id="mqttPubTopic2" style="width: 99%;"></td>
+							</tr>
+							<tr id="Mqtt2Row5">
+								<td>MQTT Subscribe Topic</td>
+								<td><input type="text" id="mqttSubTopic2" style="width: 99%;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<br>
+				<table border="2" style="width: 100%;">
+					<caption><br><h1>Special Features Settings</h1><br></caption>
+					<tbody>
+						<tr>
+							<td colspan=3 bgcolor = "PowderBlue" width = 800px style="text-align:left; font-size:15px;">Special Features settings</td>
+						</tr>
+						<tr>
+							<td>WATER LEVEL SENSOR(use LMP307)</td>
+							<td align="left">
+								<input type="radio" name="RG8" id="Water_level_Yes" value=1 />Enable
+								<input type="radio" name="RG8" id="Water_level_No"  value=0 />Disable
+							</td>
+						</tr>
+						<tr>
+							<td>GATE CONTROL</td>
+							<td align="left">
+								<input type="radio" name="RG9" id="GATE_YES" value=1 />Enable
+								<input type="radio" name="RG9" id="GATE_No"  value=0 />Disable
+							</td>
+						</tr>
+						<tr>
+							<td>YunLin PUMP MODE</td>
+							<td align="left">
+								<input type="radio" name="RG10" id="PUMP_YES" value=1 />Enable
+								<input type="radio" name="RG10" id="PUMP_No"  value=0 />Disable
+							</td>
+						</tr>
+						<tr>
+							<td>ChiaYi PUMP MODE</td>
+							<td align="left">
+								<input type="radio" name="RGCYPUMP" id="CYPUMP_YES" value=1 onClick="cyPumpEn(CYPUMP_YES.value)"/>Enable
+								<input type="radio" name="RGCYPUMP" id="CYPUMP_No"  value=0 onClick="cyPumpEn(CYPUMP_No.value)"/>Disable
+							</td>
+						</tr>
+						<tr style="display:none" id=sewerPanel>
+							<td colspan=3 bgcolor = "PowderBlue" width = 800px style="text-align:left; font-size:15px;">SEWER System Settings</td>
+						</tr>
+						<tr style="display:none" id=sewerChgStaPanel>
+							<td>Change Station</td>
+							<td>
+								<button style="width:40%;background-color:yellow;" onclick="changeSta()"><strong>change station</strong></button>
+							</td>
+						</tr>
+						<tr style="display:none" id=sewerChgSensPanel>
+							<td>Sensor Type</td>
+							<td>
+								<select id="sensorType" style="width: 50%;">
+									<option value="0">Composite Sensor</option>
+									<option value="1">Radar Sensor</option>
+									<option value="2">Pressure Water Level Sensor</option>
+								</select>
+								<button style="width:40%;background-color:yellow;" onclick="chgSensor()"><strong>change Sensor</strong></button>
+							</td>
+						</tr>
+						
+					</tbody>
+				</table>
+				<br>
+				<button class="accordion" style="display:none" id=cyPumpBoard>ChiaYi PUMP Settings</button>
+				<div class="paramPanel" id="cyPumpPanel">
+					<table id="cyPumpTb" border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>Current GPS coordinates</td> 
+								<td>
+									<span>Latitude:</span>
+									<input type="text" id="currLatitude" readonly="readonly" disabled = true style="width: 15%;"/>
+									<span>Longitude:</span>
+									<input type="text" id="currLongitude" readonly="readonly" disabled = true style="width: 15%;"/>
+									<span>Move Distance(M):</span>
+									<input type="text" id="locDist" readonly="readonly" disabled = true style="width: 15%;"/>
+								</td>
+							</tr>
+							<tr>
+								<td>Initial GPS coordinates</td>
+								<td>
+									<span>Latitude:</span>
+									<input type="text" id="initLatitude" readonly="readonly" disabled = true style="width: 15%;"/>
+									<span>Longitude:</span>
+									<input type="text" id="initLongitude" readonly="readonly" disabled = true style="width: 15%;"/>
+									<button id="setNewCoordBtn" style="width:45%;background-color:yellow;" onclick="setNewCoord()"><strong>Set new Init coordinates from Current coordinates</strong></button>
+								</td>
+							</tr>
+							<tr>
+								<td>Auto Change Initial GPS coordinates Time</td>
+								<td>
+									<span>Day:</span>
+									<input type="text" id="initGpsTimeDay"/>
+									<span>Hour:</span>
+									<input type="text" id="initGpsTimeHour"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<br>
+				<div style="text-align:right;">
+					<button style="width:260px; height: 30px;" onclick="SaveModifiedParam()"><strong>Save Basic Parameter Settings</strong></button>
+				</div>
+				<br>
+				<table id="Device" border="2" style="width: 100%;">
+					<!--<caption><br><h1>Reset Parameter File</h1><br></caption>-->
+					<caption><br><h1>Reboot Device</h1><br></caption>
+					<tbody>
+						<tr>
+							<!--<td bgcolor = "PowderBlue" width = 36% style="text-align:center;">Reset the parameters to the default values</td>-->
+							<!--<td><button style="width:155px; height: 30px; background-color:red" onclick="ResetParam()" ><strong>Reset Parameters</strong></button></td>-->
+							<td bgcolor = "PowderBlue" width = 50% style="text-align:center;">Reboot</td>
+							<!--<td><button style="width:155px; height: 30px; background-color:red" onclick="ResetDevice()" ><strong>Reboot</strong></button></td>-->
+							<td><button style="width:100%; height: 30px; background-color:red" onclick="ResetDevice()" ><strong>Reboot</strong></button></td>
+						</tr>
+					</tbody>
+				</table>
+				<br><br>
+			</div>
+			<!--------------------------Tab2----------------------------------->
+			<div id="Tab2" style="width:100%;">
+				<table id="COM_Protocol" border="2" style="width: 100%;">
+					<caption><br><h1>Ext. Device Settings</h1><br></caption>
+					<br><br>
+					<tbody>
+						<tr>
+							<td class="blueCenter" width = 16%></td>
+							<td class="blueCenter" width = 16%>COM 1(RS-485)</td>
+							<td class="blueCenter" width = 16%>COM 2(RS-485)</td>
+							<td class="blueCenter" width = 16%>COM 3(RS-232)</td>
+							<td class="blueCenter" width = 16%>Ethernet</td>
+							<td class="blueCenter" width = 16%>HS-USB</td>
+						</tr>
+						<tr>
+							<td bgcolor = "#4EB7FF" style="text-align:left;">Protocol</td>
+							<td align="center">
+								<select onclick="SelDisability(this);" class="Protocol_Sel" id="COM1_Protocol" style="width:100%">
+									<option value="0">None</option>
+									<option value="1">Modbus</option>
+									<option value="2">DCON</option>
+									<option value="3">Touch Pad</option>
+									<option value="4">AVDS Radar</option>
+									<!--<option value="17">Camera</option>-->
+									<!--<option value="5">AR-77 Radar</option>-->
+									<!--<option value="23">G-Sensor</option>-->
+								</select>
+							</td>
+							<td align="center">
+								<select onclick="SelDisability(this);" class="Protocol_Sel" id="COM2_Protocol" style="width:100%">
+									<option value="0">None</option>
+									<option value="1">Modbus</option>
+									<option value="2">DCON</option>
+									<option value="4">AVDS Radar</option>
+									<option value="6">Display Panel</option>
+									<!--<option value="18">Camera</option>-->
+									<!--<option value="5">AR-77 Radar</option>-->
+									<!--<option value="24">G-Sensor</option>-->
+								</select>
+							</td>
+							<td align="center">
+								<select onclick="SelDisability(this);" class="Protocol_Sel" id="COM3_Protocol" style="width:100%">
+									<option value="0">None</option>
+									<option value="1">Modbus</option>
+									<option value="2">DCON</option>
+									<option value="8">CONSOLE</option>
+									<!--<option value="9">GPS</option>-->
+								</select>
+							</td>
+							<td align="center">
+								<select onclick="SelDisability(this);" class="Protocol_Sel" id="ExtDevEth" style="width:100%">
+									<option value="0">None</option>
+									<option value="1">Modbus Tcp</option>
+								</select>
+							</td>
+							<td align="center">
+								<select onclick="SelDisability(this);" class="Protocol_Sel" id="ExtDevUsb" style="width:100%">
+									<option value="0">None</option>
+									<option value="7">Camera</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td bgcolor = "#4EB7FF" style="text-align:left;">Baudrate(bps)</td>
+							<td><select id="rs485baudrate_sel" class="baudrateSel" style="width: 100%;"></select></td>
+							<td><select id="rs485_2baudrate_sel" class="baudrateSel" style="width: 100%;"></select></td>
+							<td><select id="rs232_1baudrate_sel" class="baudrateSel" style="width: 100%;"></select></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td bgcolor = "#4EB7FF" style="text-align:left;">Parity-Data-Stop bit</td>
+							<td><select id="rs485PDS_sel" class="fmtSel" style="width: 100%;"></select></td>
+							<td><select id="rs485_2PDS_sel" class="fmtSel" style="width: 100%;"></select></td>
+							<td><select id="rs232_1PDS_sel" class="fmtSel" style="width: 100%;"></select></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<table id="Device_Setting" border="2" style="width: 100%;">
+					<tbody>
+						<tr>
+							<td class="blueCenter" width = 14%>Device No.</td>
+							<td class="blueCenter" width = 8%>Enable</td>
+							<td class="blueCenter" width = 13%>Ext Dev port</td>
+							<td class="blueCenter" width = 18%>Command</td>
+							<td class="blueCenter" width = 9%>Start byte</td>
+							<td class="blueCenter" width = 16%>Item data bytes</td>
+							<td class="blueCenter" width = 22%>Byte order/Data Type</td>
+							<!--<td class="blueCenter" width = 15%>HW PQ Number(DCON)</td>-->
+						</tr>
+						<tr>
+							<td rowspan="5">
+								<!--<select id="Port_Number"  onclick=UpdatePortSettings(this) style="width: 100%;">-->
+								<select id="Port_Number"  onchange=UpdatePortSettings(event) style="width: 100%;">
+									<option value="0">01~05</option>
+									<option value="1">06~10</option>
+									<option value="2">11~15</option>
+									<option value="3">16~20</option>
+									<option value="4">21~25</option>
+									<option value="5">26~30</option>
+								</select>
+							</td>
+							<td align="center"><input type="checkbox" value="1" id="Device_Enable_1"></td>
+							<td align="center"><select onclick="toggleDisability(this);" class="comSel" id="COM_Port_1" style="width:100%"></select></td>
+							<td><input type="text" id="Command_line_1" style="width:97%;text-align:center;" onClick="devCmdClick(this, 1)"></td>
+							<td><input type="text" id="Start_Byte_1" style="width:95%;text-align:center;"></td>
+							<td align="center"><select onclick="byteorderDisability(this);" class="dataType" id="Data_type_1" style="width:100%"></select></td>
+							<td align="center"><select class="dataOrder" id="Data_seq_1" style="width:100%"></select></td>
+							<!--<td><input type="text" id="hwPqCnt_1" style="width:95%;text-align:center;"></td>-->
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Device_Enable_2"></td>
+							<td align="center"><select onclick="toggleDisability(this);" class="comSel" id="COM_Port_2" style="width:100%"></select></td>
+							<td><input type="text" id="Command_line_2" style="width:97%;text-align:center;" onClick="devCmdClick(this, 2)"></td>
+							<td><input type="text" id="Start_Byte_2" style="width:95%;text-align:center;"></td>
+							<td align="center"><select onclick="byteorderDisability(this);" class="dataType" id="Data_type_2" style="width:100%"></select></td>
+							<td align="center"><select class="dataOrder" id="Data_seq_2" style="width:100%"></select></td>
+							<!--<td><input type="text" id="hwPqCnt_2" style="width:95%;text-align:center;"></td>-->
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Device_Enable_3"></td>
+							<td align="center"><select onclick="toggleDisability(this);" class="comSel" id="COM_Port_3" style="width:100%"></select></td>
+							<td><input type="text" id="Command_line_3" style="width:97%;text-align:center;" onClick="devCmdClick(this, 3)"></td>
+							<td><input type="text" id="Start_Byte_3" style="width:95%;text-align:center;"></td>
+							<td align="center"><select onclick="byteorderDisability(this);" class="dataType" id="Data_type_3" style="width:100%"></select></td>
+							<td align="center"><select class="dataOrder" id="Data_seq_3" style="width:100%"></select></td>
+							<!--<td><input type="text" id="hwPqCnt_3" style="width:95%;text-align:center;"></td>-->
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Device_Enable_4"></td>
+							<td align="center"><select onclick="toggleDisability(this);" class="comSel" id="COM_Port_4" style="width:100%"></select></td>
+							<td><input type="text" id="Command_line_4" style="width:97%;text-align:center;" onClick="devCmdClick(this, 4)"></td>
+							<td><input type="text" id="Start_Byte_4" style="width:95%;text-align:center;"></td>
+							<td align="center"><select onclick="byteorderDisability(this);" class="dataType" id="Data_type_4" style="width:100%"></select></td>
+							<td align="center"><select class="dataOrder" id="Data_seq_4" style="width:100%"></select></td>
+							<!--<td><input type="text" id="hwPqCnt_4" style="width:95%;text-align:center;"></td>-->
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Device_Enable_5"></td>
+							<td align="center"><select onclick="toggleDisability(this);" class="comSel" id="COM_Port_5" style="width:100%"></select></td>
+							<td><input type="text" id="Command_line_5" style="width:97%;text-align:center;" onClick="devCmdClick(this, 5)"></td>
+							<td><input type="text" id="Start_Byte_5" style="width:95%;text-align:center;"></td>
+							<td align="center"><select onclick="byteorderDisability(this);" class="dataType" id="Data_type_5" style="width:100%"></select></td>
+							<td align="center"><select class="dataOrder" id="Data_seq_5" style="width:100%"></select></td>
+							<!--<td><input type="text" id="hwPqCnt_5" style="width:95%;text-align:center;"></td>-->
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<button class="accordion" style="display:none" id=AR77_board>RADAR AR77 Settings</button>
+				<div class="paramPanel" id="ar77Panel">
+					<table id="AR77_set" border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td class="blueCenter" width = 25%>Method</td>
+								<td class="blueCenter" width = 25%>Max Distance (mm)</td>
+								<td class="blueCenter" width = 25%>Min Distance (mm)</td>
+								<td class="blueCenter" width = 25%>X Range</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<select id="ar77_MSEL" style="width:100%">
+										<option value="0">Normal</option>
+										<option value="1">mode 1</option>
+									</select>
+								</td>
+								<td><input type="text" id="ar77MaxDist" style="width:97%;text-align:center;"></td>
+								<td><input type="text" id="ar77MinDist" style="width:97%;text-align:center;"></td>
+								<td align="center">
+									<select id="ar77_x_range" style="width:100%">
+										<option value="0">no Limit</option>
+										<option value="1">0</option>
+										<option value="2">+/- 1</option>
+										<option value="3">+/- 2</option>
+										<option value="4">+/- 3</option>
+										<option value="5">+/- 4</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td class="blueCenter" width = 25%>Resolution</td>
+								<td class="blueCenter" width = 25%>Offset (mm)</td>
+								<td class="blueCenter" width = 25%>Water Detect Sensor</td>
+								<td class="blueCenter" width = 25%>-</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<select id="ar77_resolution" style="width:100%">
+										<option value="0">Auto</option>
+										<option value="1">High Resolution (10M Distance)</option>
+										<option value="2">Low  Resolution (30M Distance)</option>
+									</select>
+								</td>
+								<td><input type="text" id="ar77Offset" style="width:97%;text-align:center;"></td>
+								<td align="center">
+									<select id="wls_77g" style="width:100%">
+										<option value="0">Disable</option>
+										<option value="1">3 Stage</option>
+										<option value="2">1 Stage</option>
+									</select>
+								</td>
+								<td style="width:97%;text-align:center;" readonly="readonly"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<button class="accordion" style="display:none" id=AVDS_board>AVDS RADAR Settings</button>
+				<div class="paramPanel" id="avdsPanel">
+					<table id="AVDS_set" border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>Mode</td>
+								<td align="center">
+									<select id="avds_MSEL" onchange="selAvdsMode()" style="width:100%">
+										<option value="0">Single vertical</option>
+										<option value="1">Dual</option>
+										<option value="2">Single Tilt</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Vertical Radar Start Azimuth(-22~22)</td>
+								<td><input type="text" id="avdsStartAzimuth" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>Vertical Radar End Azimuth(-22~22)</td>
+								<td><input type="text" id="avdsEndAzimuth" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>Vertical Radar Start Range(mm)</td>
+								<td><input type="text" id="avdsStartRange" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>Vertical Radar End Range(mm)</td>
+								<td><input type="text" id="avdsEndRange" style="width: 99%;"></td>
+							</tr>
+							<tr>
+								<td>Vertical Install Height(mm)</td>
+								<td><input type="text" id="avdsMaxDist" style="width: 99%;"></td>
+							</tr>
+							<tr id="dualSet1">
+								<td>Distance between Dual Radar(mm)</td>
+								<td><input type="text" id="avdsDaulDist" style="width: 99%;"></td>
+							</tr>
+							<tr id="dualSet2">
+								<td>Tilt Radar Angle</td>
+								<td><input type="text" id="avdsTiltRadarAngle" style="width: 99%;"></td>
+							</tr>
+							<tr id="dualSet3">
+								<td>Tilt Range Bin(0-3)</td>
+								<td><input type="text" id="avdsTitleRangeBin" style="width: 99%;"></td>
+							</tr>
+							<tr id="dualSet4">
+								<td>Water Level(mm)</td>
+								<td><input type="text" id="avdsWaterLevel" style="width: 99%;"></td>
+							</tr>
+						</tbody>
+					</table>
+					<div style="text-align:right;">
+						<button id="btnCalibration" style="width:260px; height: 30px;" onclick="avdsCalibration()">Calibration</button>
+					</div>
+				</div>
+
+				<button class="accordion" style="display:none" id=compOsaBoard>Composite OSA 24G Radar with Pressure Water Level Sensor Settings</button>
+				<div class="paramPanel" id=compOsa24Panel>
+					<table border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>Radar Device No.</td>
+								<td><input type="text" id="compOsaDevNo" style="width: 99%;" class="keyup0"/></td>
+							</tr>
+							<tr>
+								<td>OSA 24G Power Source</td>
+								<td align="center">
+									<select id="compOsaPwr" style="width:100%">
+										<option value="0">DO0</option>
+										<option value="1">DO1</option>
+										<option value="3">DO_5V</option>
+										<option value="2">External</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Pressure Water Level Sensor Device No.</td>
+								<td><input type="text" id="compWlsDevNo" style="width: 99%;" class="keyup0"/></td>
+							</tr>
+							<tr>
+								<td>Pressure Water Level Sensor Power Source</td>
+								<td align="center">
+									<select id="compWlsPwr" style="width:100%">
+										<option value="0">DO0</option>
+										<option value="1">DO1</option>
+										<option value="3">DO_5V</option>
+										<option value="2">External</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Alert Trigger Value (M)</td>
+								<td><input type="text" id="compOsaAlertTrig" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr>
+								<td>Alert Cancel Value (M)</td>
+								<td><input type="text" id="compOsaAlertRet" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr>
+								<td>Install Distance between 2 Sensor (M)</td>
+								<td><input type="text" id="compOsaDist" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr>
+								<td>Install Height (M)</td>
+								<td><input type="text" id="compOsaIh" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr>
+								<td>Altitude (M)</td>
+								<td><input type="text" id="compOsaAlt" style="width: 99%;" class="keyup5"/></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+								
+				<button class="accordion" id=OSA24_board>OSA 24G Radar Settings</button>
+				<div class="paramPanel" id=osa24Panel>
+					<table border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>Device No.</td>
+								<td><input type="text" id="osaDevNo" style="width: 99%;" class="keyup0"/></td>
+							</tr>
+							<tr>
+								<td>Slave ID</td>
+								<td><input type="text" id="osaSlaveId" style="width: 99%;" class="keyup0"/></td>
+							</tr>
+							<tr>
+								<td>OSA 24G Power Source</td>
+								<td align="center">
+									<select id="osa24gPwr" style="width:100%">
+										<option value="0">DO0</option>
+										<option value="1">DO1</option>
+										<option value="2">External</option>
+									</select>
+								</td>
+							</tr>
+							<tr style="display:none">
+								<td>Enable OSA RADAR Alert</td>
+								<td align="center">
+									<select id="osa24gAlert" onchange="selOsa24gAlert()" style="width:100%">
+										<option value="0">Disable</option>
+										<option value="1">Enable use Water Altitude</option>
+										<option value="2">Enable use Radar Distance</option>
+									</select>
+								</td>
+							</tr>
+							<tr id="osaThresholdVal" style="display:none">
+								<td>Alert value threshold</td>
+								<td><input type="text" id="osaAlertThreshold" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr style="display:none">
+								<td>Water Level Sensor with Alert</td>
+								<td align="center">
+									<select id="osa24gWl" onchange="selOsaWls" style="width:100%">
+										<option value="0">Disable</option>
+										<option value="1">Enable With DI0 USE DO0</option>
+										<option value="2">Enable With DI1 USE DO0</option>
+										<option value="3">Enable With DI2 USE DO0</option>
+										<option value="4">Enable With DI3 USE DO0</option>
+										<option value="129">Enable With DI0 USE DO1</option>
+										<option value="130">Enable With DI1 USE DO1</option>
+										<option value="131">Enable With DI2 USE DO1</option>
+										<option value="132">Enable With DI3 USE DO1</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Max. Distance(mm)</td>
+								<td><input type="text" id="osaMax" style="width: 99%;" class="keyup0"/></td>
+							</tr>
+							<tr>
+								<td>Min. Distance(mm)</td>
+								<td><input type="text" id="osaMin" style="width: 99%;" class="keyup0"/></td>
+							</tr>
+							<tr id="osaPolling">
+								<td>Polling Interval</td>
+								<td align="center">
+									<select id="osaPollInt" style="width:100%">
+										<option value="0">Continued</option>
+										<option value="1">1 min</option>
+										<option value="2">according to Record interval</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<button class="accordion" id=vw_board>VW Sensor Settings</button>
+				<div class="paramPanel" id=vwPanel>
+					<table border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>Device No.</td>
+								<td><input type="text" id="vwDevNo" style="width: 99%;" class="keyup0"/></td>
+							</tr>
+							<tr>
+								<td>Slave ID</td>
+								<td><input type="text" id="vwSlaveId" style="width: 99%;" class="keyup0"/></td>
+							</tr>
+							<tr>
+								<td>VW senspr Power Source</td>
+								<td align="center">
+									<select id="vwPwr" style="width:100%">
+										<option value="0">DO0</option>
+										<option value="1">DO1</option>
+										<option value="2">External</option>
+									</select>
+								</td>
+							</tr>
+							<tr id="vwPwrTimer">
+								<td>Power Stable Time</td>
+								<td><input type="text" id="vwPwrTime" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr id="vwPolling">
+								<td>Polling Interval</td>
+								<td align="center">
+									<select id="vwPollInt" style="width:100%">
+										<option value="0">Continued</option>
+										<option value="1">1 min</option>
+										<option value="2">according to Record interval</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<button class="accordion" id=cameraBrd>Camera Settings</button>
+				<div class="paramPanel" id="cameraPanel">
+					<table id="cameraTb" border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>Camera send interval(multiple recording interval)</td>
+								<td>
+									<select id="mod_camera_interval" style="width: 100%;">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="10">10</option>
+										<option value="12">12</option>
+										<option value="24">24</option>
+										<option value="36">36</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Camera send interval in Alert mode(minute)</td>
+								<td>
+									<select id="cameraAlertInterval" style="width: 100%;">
+										<option value="60">1</option>
+										<option value="180">3</option>
+										<option value="300">5</option>
+										<option value="600">10</option>
+										<option value="1200">20</option>
+										<option value="1800">30</option>
+										<option value="3600">60</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Camera Resolution</td>
+								<td>
+									<select id="cameraResolution" style="width: 100%;">
+										<option value="0">640*480</option>
+										<option value="1">320*240</option>
+										<option value="2">160*120</option>
+										<option value="3">1024*768</option>
+										<option value="4">1280*720</option>
+										<option value="5">1280*960</option>
+										<option value="6">1920*1080</option>
+										<option value="7">2304*1296</option>
+										<option value="8">2560*1440</option>
+										<option value="9">2560*1920</option>
+										<option value="10">3200*1800</option>
+										<option value="11">3520*1980</option>
+										<option value="12">3840*2160</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Camera Quality</td>
+								<td>
+									<select id="cameraQuality" style="width: 100%;">
+										<option value="0">Normal</option>
+										<option value="1">Fine</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				
+					<br>
+					<fieldset id="cameraBoard">
+						<legend style="font-size:18px;">Camera Check</legend>
+						<div style="text-align:center;">
+							<table border="1" style="width: 95%;" >
+								<tbody>
+									<tr>
+										<td><button id="btnGetCloudPic" style="width: 100%;background-color:yellow;" onclick="catchPic(0)"><strong>Check Cloud Image</strong></button></td>
+										<td><button id="btnSendToCloud" style="width: 100%;background-color:yellow;" onclick="catchPic(1)"><strong>Catch Image & send to cloud</strong></button></td>
+										<td><button id="btnCameraCatch" style="width: 100%;background-color:yellow;" onclick="catchPic(2)"><strong>Catch Image</strong></button></td>
+									</tr>
+									<br>
+								</tbody>
+							</table>
+						</div>
+						<br>
+						<span id="cameraSts" style="font-size: 12px; display: none;"></span>
+						<br>
+						<div style="text-align:center;">
+							<img id="imgId" style="max-width: 100%;"/>
+						</div>
+					</fieldset>
+				</div>
+				<br>
+				<table id="Device" border="2" style="width: 100%;">
+					<caption><br><h1>Onboard AI Parameters</h1><br></caption>
+					<tbody>
+						<tr>
+							<td>ADC Enable</td>
+							<td align="left">
+								<input type="radio" name="RG7" id="ADC_power_Yes" onclick=adcEnable(1) value=1 />Enable
+								<input type="radio" name="RG7" id="ADC_power_No"  onclick=adcEnable(0) value=0 />Disable
+							</td>
+						</tr>
+						<tr>
+							<td>VOLTAGE ADC Mode</td>
+							<td align="left">
+								<input type="radio" name="AIMode" id="AI_Diff" onclick=setAiMode(0) value=0 />Differential
+								<input type="radio" name="AIMode" id="AI_Single"  onclick=setAiMode(1) value=1 />Single-ended
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table id="adcCfg" border="2" style="width: 100%;">
+					<tbody>
+						<tr>
+							<td></td>
+							<td class="blueCenter">Current AI-0</td>
+							<td class="blueCenter">Current AI-1</td>
+							<td class="blueCenter">Current AI-2</td>
+							<td class="blueCenter">Voltage AI-3</td>
+							<td class="blueCenter">Voltage AI-4</td>
+						</tr>
+						<tr>
+							<td bgcolor = "#4EB7FF">Sensor Type</td>
+							<td align="center"><select class="aiSensorType1" id="senType0" style="width:100%"></select></td>
+							<td align="center"><select class="aiSensorType1" id="senType1" style="width:100%"></select></td>
+							<td align="center"><select class="aiSensorType1" id="senType2" style="width:100%"></select></td>
+							<td align="center"><select class="aiSensorType2" id="senType3" style="width:100%"></select></td>
+							<td align="center"><select class="aiSensorType2" id="senType4" style="width:100%"></select></td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<button class="accordion" style="display:none" id=compSiemensBoard>Composite SIEMENS LR110 with Pressure Water Level Sensor Settings</button>
+				<div class="paramPanel" id=compLr110Panel>
+					<table border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>SIEMENS LR110 AI No.</td>
+								<td align="center">
+									<select id="compLr110Ai" style="width:100%">
+										<option value="-1">UN-USE</option>
+										<option value="0">AI-0</option>
+										<option value="1">AI-1</option>
+										<option value="2">AI-2</option>
+										<!--<option value="3">AI-3</option>-->
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>SIEMENS LR110 Power Source</td>
+								<td align="center">
+									<select id="compLR110Pwr" style="width:100%">
+										<option value="0">DO0</option>
+										<option value="1">DO1</option>
+										<option value="3">DO_24V</option>
+										<option value="2">External</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Pressure Water Level Sensor AI No.</td>
+								<td align="center">
+									<select id="compLr110WlsAiNo" style="width:100%">
+										<option value="-1">UN-USE</option>
+										<option value="0">AI-0</option>
+										<option value="1">AI-1</option>
+										<option value="2">AI-2</option>
+										<!--<option value="3">AI-3</option>-->
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Pressure Water Level Sensor Power Source</td>
+								<td align="center">
+									<select id="compLr110WlsPwr" style="width:100%">
+										<option value="0">DO0</option>
+										<option value="1">DO1</option>
+										<option value="3">DO_24V</option>
+										<option value="2">External</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Alert Trigger Value (M)</td>
+								<td><input type="text" id="compLr110AlertTrig" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr>
+								<td>Alert Cancel Value (M)</td>
+								<td><input type="text" id="compLr110AlertRet" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr>
+								<td>Install Distance between 2 Sensor (M)</td>
+								<td><input type="text" id="compLr110Dist" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr>
+								<td>Install Height (M)</td>
+								<td><input type="text" id="compLr110Ih" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr>
+								<td>Radar Blind Area (M)</td>
+								<td><input type="text" id="compLr110Blind" style="width: 99%;" class="keyup2"/></td>
+							</tr>
+							<tr>
+								<td>Altitude (M)</td>
+								<td><input type="text" id="compLr110Alt" style="width: 99%;" class="keyup5"/></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<br>
+				<table id="diDev" border="2" style="width: 100%;">
+					<caption><br><h1>Onboard DI Parameters</h1><br></caption>
+					<tbody>
+						<tr>
+							<td>DI status Record</td>
+							<td align="left">
+								<input type="radio" name="DIS1" id="di_status_Yes" value=1 />Enable
+								<input type="radio" name="DIS1" id="di_status_No"  value=0 />Disable
+							</td>
+						</tr>	
+						<tr>
+							<td>DI trigger</td>
+							<td align="left">
+								<input type="checkbox" value="1" id="DI0_Wakeup" disabled>DI 0
+								<input type="checkbox" value="1" id="DI1_Wakeup" disabled>DI 1
+								<input type="checkbox" value="1" id="DI2_Wakeup" disabled>DI 2
+								<input type="checkbox" value="1" id="DI3_Wakeup" disabled>DI 3
+							</td>
+						</tr>
+						<tr>
+							<td>Dynamic recording interval for wakeup from DI (min)</td>
+							<td>
+								<select id="dynamicRecSec" style="width: 100%;">
+									<option value="0">None</option>
+									<option value="60">1</option>
+									<option value="180">3</option>
+									<option value="300">5</option>
+									<option value="600">10</option>
+									<option value="1800">30</option>
+									<option value="3600">60</option>
+									<option value="21600">360</option>
+									<option value="43200">720</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<br>				
+				<div style="text-align:right;">
+					<button id="Save_PARAM" style="width:260px; height: 30px;" onclick="SaveParam()"><strong>Save Device Settings</strong></button>
+				</div>
+				<br><br>
+			</div>
+
+			<!--------------------------Tab3----------------------------------->
+			<div id="Tab3" style="width:100%;">
+				<table id="Channel_Setting" border="2" style="width: 100%;">
+					<caption><br><h1>Software Physical Quantity Settings</h1><br></caption>
+					<br><br>
+					<tbody>
+						<tr>
+							<td class="blueCenter" width = 10%>PQ NO.</td>
+							<td class="blueCenter" width = 8%>Enable</td>
+							<td class="blueCenter" width = 8%>Device No.</td>
+							<td class="blueCenter" width = 15%>No. of<br>measurements(HW PQ)</td>
+							<td class="blueCenter" width = 10%>Formula ID</td>
+							<td class="blueCenter" width = 8%>Filter</td>
+							<td class="blueCenter" width = 20%>server 1<br>Alias</td>
+							<td class="blueCenter" width = 20%>server 2<br>Alias</td>
+						</tr>
+						<tr>
+							<td rowspan="8">
+								<select id="AI_Number"  onclick=UpdateNodeData(this) style="width: 100%;">
+									<option value="0">00~07</option>
+									<option value="1">08~15</option>
+									<option value="2">16~23</option>
+									<option value="3">24~31</option>
+								</select>
+							</td>
+							<td align="center"><input type="checkbox" value="1" id="Channel_Enable_0"></td>
+							<td><input type="text" id="Device_no_0" style="width: 95%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Item_num_0" style="width: 96%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="EQN_0" style="width: 96%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Filter_Enable_0" style="width: 94%;text-align:center;" class="keyup0"></td>
+							<!--<td align="center"><input type="checkbox" value="1" id="Power0_DO_0"></td>
+							<td align="center"><input type="checkbox" value="1" id="Power0_DO_1"></td>-->
+							<td><input type="text" id="Alias_0" style="width: 96%;text-align:center;"></td>
+							<td><input type="text" id="srv2Alias_0" style="width: 96%;text-align:center;"></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Channel_Enable_1"></td>
+							<td><input type="text" id="Device_no_1" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Item_num_1" style="width:98%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="EQN_1" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Filter_Enable_1" style="width: 97%;text-align:center;" class="keyup0"></td>
+							<!--<td align="center"><input type="checkbox" value="1" id="Power1_DO_0"></td>
+							<td align="center"><input type="checkbox" value="1" id="Power1_DO_1"></td>-->
+							<td><input type="text" id="Alias_1" style="width: 96%;text-align:center;"></td>
+							<td><input type="text" id="srv2Alias_1" style="width: 96%;text-align:center;"></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Channel_Enable_2"></td>
+							<td><input type="text" id="Device_no_2" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Item_num_2" style="width:98%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="EQN_2" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Filter_Enable_2" style="width: 97%;text-align:center;" class="keyup0"></td>
+							<!--<td align="center"><input type="checkbox" value="1" id="Power2_DO_0"></td>
+							<td align="center"><input type="checkbox" value="1" id="Power2_DO_1"></td>-->
+							<td><input type="text" id="Alias_2" style="width: 96%;text-align:center;"></td>
+							<td><input type="text" id="srv2Alias_2" style="width: 96%;text-align:center;"></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Channel_Enable_3"></td>
+							<td><input type="text" id="Device_no_3" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Item_num_3" style="width:98%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="EQN_3" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Filter_Enable_3" style="width: 97%;text-align:center;" class="keyup0"></td>
+							<!--<td align="center"><input type="checkbox" value="1" id="Power3_DO_0"></td>
+							<td align="center"><input type="checkbox" value="1" id="Power3_DO_1"></td>-->
+							<td><input type="text" id="Alias_3" style="width: 96%;text-align:center;"></td>
+							<td><input type="text" id="srv2Alias_3" style="width: 96%;text-align:center;"></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Channel_Enable_4"></td>
+							<td><input type="text" id="Device_no_4" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Item_num_4" style="width:98%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="EQN_4" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Filter_Enable_4" style="width: 97%;text-align:center;" class="keyup0"></td>
+							<!--<td align="center"><input type="checkbox" value="1" id="Power4_DO_0"></td>
+							<td align="center"><input type="checkbox" value="1" id="Power4_DO_1"></td>-->
+							<td><input type="text" id="Alias_4" style="width: 96%;text-align:center;"></td>
+							<td><input type="text" id="srv2Alias_4" style="width: 96%;text-align:center;"></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Channel_Enable_5"></td>
+							<td><input type="text" id="Device_no_5" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Item_num_5" style="width:98%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="EQN_5" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Filter_Enable_5" style="width: 97%;text-align:center;" class="keyup0"></td>
+							<!--<td align="center"><input type="checkbox" value="1" id="Power5_DO_0"></td>
+							<td align="center"><input type="checkbox" value="1" id="Power5_DO_1"></td>-->
+							<td><input type="text" id="Alias_5" style="width: 96%;text-align:center;"></td>
+							<td><input type="text" id="srv2Alias_5" style="width: 96%;text-align:center;"></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Channel_Enable_6"></td>
+							<td><input type="text" id="Device_no_6" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Item_num_6" style="width:98%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="EQN_6" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Filter_Enable_6" style="width: 97%;text-align:center;" class="keyup0"></td>
+							<!--<td align="center"><input type="checkbox" value="1" id="Power6_DO_0"></td>
+							<td align="center"><input type="checkbox" value="1" id="Power6_DO_1"></td>-->
+							<td><input type="text" id="Alias_6" style="width: 96%;text-align:center;"></td>
+							<td><input type="text" id="srv2Alias_6" style="width: 96%;text-align:center;"></td>
+						</tr>
+						<tr>
+							<td align="center"><input type="checkbox" value="1" id="Channel_Enable_7"></td>
+							<td><input type="text" id="Device_no_7" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Item_num_7" style="width:98%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="EQN_7" style="width:97%;text-align:center;" class="keyup0"></td>
+							<td><input type="text" id="Filter_Enable_7" style="width: 97%;text-align:center;" class="keyup0"></td>
+							<!--<td align="center"><input type="checkbox" value="1" id="Power7_DO_0"></td>
+							<td align="center"><input type="checkbox" value="1" id="Power7_DO_1"></td>-->
+							<td><input type="text" id="Alias_7" style="width: 96%;text-align:center;"></td>
+							<td><input type="text" id="srv2Alias_7" style="width: 96%;text-align:center;"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="text-align:right;">
+					<button id="Save_NodePARAM" style="width:260px; height: 30px;" onclick="SaveNodeParam()"><strong>Save Node Settings</strong></button>
+				</div>
+				<br><br><br>
+				<fieldset>
+					<legend style="font-size:18px;">DO Mode selection</legend>
+  				<br>
+  				<table id="DO_Mode_Setting" border="2" style="width: 100%;">
+  					<tbody>
+  						<tr>
+  							<td class="blueCenter" width = 80%>DO_0 / DO_1 action mode</td>
+  							<td align="center" width = 20%>
+  								<select id="DO_Master_Mode_0" style="width: 100%;">
+  									<option value="0">Mode 0</option>
+  									<option value="1">Mode 1</option>
+  									<option value="2">Mode 2</option>
+  									<!--<option value="3">Mode 3</option>-->
+  								</select>
+  							</td>
+  						</tr>
+  					</tbody>
+  				</table>
+  			</fieldset>
+				<br>
+				<fieldset>
+					<legend style="font-size:16px;">[Mode 0] Remote Control / [Mode 1] Follow Settings / [Mode 2] Follow Recording Interval</legend>
+					<br>
+					<table id="DO_Setting" border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td align="center" width = 7%><input type="checkbox" value="1" id="DO_0_Output"></td>
+								<td class="blueCenter" width = 26%>DO_12V_0 enable</td>
+								<td align="center" width = 7%><input type="checkbox" value="1" id="DO_1_Output"></td>
+								<td class="blueCenter" width = 26%>DO_12V_1 enable</td>
+								<td align="center" width = 7%><input type="checkbox" value="1" id="DO_5V_Output"></td>
+								<td class="blueCenter" width = 26%>DO_24V enable</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<br>
+				
+				<!--<fieldset style="display:none">-->
+					<!--<legend style="font-size:16px;">[Mode 3] DO Mode Parameters settings</legend>-->
+					<!--<table id="DO_Setting" border="2" style="width: 100%;">-->
+						<!--<br>-->
+						<!--<tbody>-->
+							<!--<tr>-->
+								<!--<td class="blueCenter" width = 7%>Enable</td>-->
+								<!--<td class="blueCenter" width = 10%>DO NO.</td>-->
+								<!--<td class="blueCenter" width = 33%>Software PQ</td>-->
+								<!--<td class="blueCenter" width = 15%>Threshold low</td>-->
+								<!--<td class="blueCenter" width = 15%>Threshold high</td>-->
+								<!--<td class="blueCenter" width = 20%>Mode</td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td align="center"><input type="checkbox" value="1" id="DO_Enable_0"></td>-->
+								<!--<td style="text-align:center;">DO_0</td>-->
+								<!--<td><input type="text" id="Software_no_0" style="width:99%;text-align:center;" class="keyup0"></td>-->
+								<!--<td><input type="text" id="Bat_low_0" style="width:97%;text-align:center;" class="keyup5"></td>-->
+								<!--<td><input type="text" id="Bat_high_0" style="width:97%;text-align:center;" class="keyup5"></td>-->
+								<!--<td><select id="DO_Mode_0" class="doAutoSel" style="width: 100%;"></select></td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td align="center"><input type="checkbox" value="1" id="DO_Enable_1"></td>-->
+								<!--<td style="text-align:center;">DO_0</td>-->
+								<!--<td><input type="text" id="Software_no_1" style="width:99%;text-align:center;" class="keyup0"></td>-->
+								<!--<td><input type="text" id="Bat_low_1" style="width:97%;text-align:center;" class="keyup5"></td>-->
+								<!--<td><input type="text" id="Bat_high_1" style="width:97%;text-align:center;" class="keyup5"></td>-->
+								<!--<td><select id="DO_Mode_1" class="doAutoSel" style="width: 100%;"></select></td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td align="center"><input type="checkbox" value="1" id="DO_Enable_2"></td>-->
+								<!--<td bgcolor = "#E0E0E0"  style="text-align:center;">DO_1</td>-->
+								<!--<td><input type="text" id="Software_no_2" style="width:99%;text-align:center;" class="keyup0"></td>-->
+								<!--<td><input type="text" id="Bat_low_2" style="width:97%;text-align:center;" class="keyup5"></td>-->
+								<!--<td><input type="text" id="Bat_high_2" style="width:97%;text-align:center;" class="keyup5"></td>-->
+								<!--<td><select id="DO_Mode_2" class="doAutoSel" style="width: 100%;"></select></td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td align="center"><input type="checkbox" value="1" id="DO_Enable_3"></td>-->
+								<!--<td bgcolor = "#E0E0E0"  style="text-align:center;">DO_1</td>-->
+								<!--<td><input type="text" id="Software_no_3" style="width:99%;text-align:center;" class="keyup0"></td>-->
+								<!--<td><input type="text" id="Bat_low_3" style="width:97%;text-align:center;" class="keyup5"></td>-->
+								<!--<td><input type="text" id="Bat_high_3" style="width:97%;text-align:center;" class="keyup5"></td>-->
+								<!--<td><select id="DO_Mode_3" class="doAutoSel" style="width: 100%;"></select></td>-->
+							<!--</tr>-->
+						<!--</tbody>-->
+					<!--</table>-->
+				<!--</fieldset>-->
+				<div style="text-align:right;">
+					<button id="Save_DOPARAM" style="width:260px; height: 30px;" onclick="SaveDoParam()"><strong>Save DO Settings</strong></button>
+				</div>
+				<br><br><br>
+				<button class="accordion" style="display:none" id=doMapBoard>DO Wired Mapping Setting</button>
+				<div class="paramPanel" id=doMapPanel>
+					<table border="2" style="width: 100%;">
+						<tbody>
+							<tr>
+								<td>DO-0</td>
+								<td>DO-1</td>
+								<td>DO-2</td>
+								<td>DO-3</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td align="center"><select onchange="doMapChg(0);" class="doMapSel" id="doMapSel0" style="width:100%"></select></td>
+								<td align="center"><select onchange="doMapChg(1);" class="doMapSel" id="doMapSel1" style="width:100%"></select></td>
+								<td align="center"><select onchange="doMapChg(2);" class="doMapSel" id="doMapSel2" style="width:100%"></select></td>
+								<td align="center"><select onchange="doMapChg(3);" class="doMapSel" id="doMapSel3" style="width:100%"></select></td>
+								<td>
+									<button id="saveDoMapBtn" style="width:100%;background-color:yellow;" onclick="saveDoMap()"><strong>Save DO Mapping</strong></button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<table id="Device" border="2" style="width: 100%;">
+					<caption><br><h1>Formula1 Coefficients</h1><br></caption>
+					<tbody>
+						<tr>
+							<br>
+							<td width = 25% style="text-align:center;font-size:18px"><strong>y = a[x]<sup>2</sup> + b[x] + c</strong></td>
+						</tr>
+						<tr>
+							<td class="blueCenter" width = 25%>Formula ID</td>
+							<td class="blueCenter" width = 25%>Coef. a</td>
+							<td class="blueCenter" width = 25%>Coef. b</td>
+							<td class="blueCenter" width = 25%>Coef. c</td>
+						</tr>
+						<tr>
+							<td>
+								<select id="Coef_Number"  onclick=CoefChange(this) style="width: 100%;">
+									<option value="0">00</option>
+									<option value="1">01</option>
+									<option value="2">02</option>
+									<option value="3">03</option>
+									<option value="4">04</option>
+									<option value="5">05</option>
+									<option value="6">06</option>
+									<option value="7">07</option>
+									<option value="8">08</option>
+									<option value="9">09</option>
+								</select>
+							</td>
+							<td><input type="text" style="width:98%;text-align:center;" id="Coef_A" class="keyup5"></td>
+							<td><input type="text" style="width:98%;text-align:center;" id="Coef_B" class="keyup5"></td>
+							<td><input type="text" style="width:98%;text-align:center;" id="Coef_C" class="keyup5"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="text-align:right;">
+					<button id="Save_Formula" style="width:260px; height: 30px;" onclick="SaveFormulaParam()"><strong>Save Formula1 Coefficients</strong></button>
+				</div>
+				<table id="Device_1" border="2" style="width: 100%;">
+					<caption><br><h1>Formula2 Coefficients</h1><br></caption>
+					<tbody>
+						<tr><br>
+							<td width = 25% style="text-align:center;font-size:18px"><strong>y = a[x]<sup>b</sup></strong></td>
+						</tr>
+						<tr>
+							<td class="blueCenter" width = 25%>Formula ID</td>
+							<td class="blueCenter" width = 37%>Coef. a</td>
+							<td class="blueCenter" width = 38%>Coef. b</td>
+						</tr>
+						<tr>
+							<td>
+								<select id="Coef_Number_1"  onclick=CoefChange_1(this) style="width: 100%;">
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+								</select>
+							</td>
+							<td><input type="text" style="width:99%;text-align:center;" id="Coef_A_1" class="keyup5"></td>
+							<td><input type="text" style="width:99%;text-align:center;" id="Coef_B_1" class="keyup5"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="text-align:right;">
+					<button id="Save_Formula_1" style="width:260px; height: 30px;" onclick="SaveFormulaParam_1()"><strong>Save Formula2 Coefficients</strong></button>
+				</div>
+				<br><br>
+			</div>
+			<!--------------------------Tab4----------------------------------->
+			<div id="Tab4" style="width:100%;">
+				<table id="Pure_ai" border="2" style="width: 100%;">
+					<caption><br><h1>Onboard Hardware Physical Quantity Values</h1><br></caption>
+					<tbody>
+						<br><br>
+						<tr>
+							<td class="blueLeft" width = 12%>00-AI0(Current)</td>
+							<td class="blueLeft" width = 12%>01-AI1(Current)</td>
+							<td class="blueLeft" width = 12%>02-AI2(Current)</td>
+							<td class="blueLeft" width = 12%>03-AI3(Volt)</td>
+							<td class="blueLeft" width = 12%>04-AI4(Volt)</td>
+							<td class="blueLeft" width = 12%>05-</td>
+							<td class="blueLeft" width = 12%>06-</td>
+							<td class="blueLeft" width = 12%>07-</td>
+						</tr>
+						<tr>
+							<td id="onboardPq0" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq1" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq2" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq3" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq4" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq5" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq6" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq7" width = 12% style="text-align:center;" readonly="readonly"></td>
+						</tr>
+						<tr>
+							<td class="blueLeft" width = 12%>08-DI0 counter</td>
+							<td class="blueLeft" width = 12%>09-DI1 counter</td>
+							<td class="blueLeft" width = 12%>10-DI2 counter</td>
+							<td class="blueLeft" width = 12%>11-DI3 counter</td>
+							<td class="blueLeft" width = 12%>12-</td>
+							<td class="blueLeft" width = 12%>13-</td>
+							<td class="blueLeft" width = 12%>14-</td>
+							<td class="blueLeft" width = 12%>15-</td>
+						</tr>
+						<tr>
+							<td id="onboardPq8" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq9" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq10" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq11" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq12" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq13" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq14" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq15" width = 12% style="text-align:center;" readonly="readonly"></td>
+						</tr>
+						<tr>
+							<td class="blueLeft" width = 12%>16-DI0 status</td>
+							<td class="blueLeft" width = 12%>17-DI1 status</td>
+							<td class="blueLeft" width = 12%>18-DI2 status</td>
+							<td class="blueLeft" width = 12%>19-DI3 status</td>
+							<td class="blueLeft" width = 12%>20-</td>
+							<td class="blueLeft" width = 12%>21-</td>
+							<td class="blueLeft" width = 12%>22-</td>
+							<td class="blueLeft" width = 12%>23-</td>
+						</tr>
+						<tr>
+							<td id="onboardPq16" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq17" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq18" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq19" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq20" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq21" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq22" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq23" width = 12% style="text-align:center;" readonly="readonly"></td>
+						</tr>
+						<tr>
+							<td class="blueLeft" width = 12%>24-DO0 status</td>
+							<td class="blueLeft" width = 12%>25-DO1 status</td>
+							<td class="blueLeft" width = 12%>26-</td>
+							<td class="blueLeft" width = 12%>27-</td>
+							<td class="blueLeft" width = 12%>28-</td>
+							<td class="blueLeft" width = 12%>29-</td>
+							<td class="blueLeft" width = 12%>30-DO24V Status</td>
+							<td class="blueLeft" width = 12%>31-</td>
+						</tr>
+						<tr>
+							<td id="onboardPq24" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq25" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq26" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq27" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq28" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq29" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq30" width = 12% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq31" width = 12% style="text-align:center;" readonly="readonly"></td>
+						</tr>
+						<tr>
+					</tbody>
+				</table>
+				<table border="2" style="width: 100%;">
+					<tbody>
+							<td class="blueLeft" width = 20%>32-Error Code</td>
+							<td class="blueLeft" width = 20%>33-Temperature</td>
+							<td class="blueLeft" width = 20%>34-Battery voltage</td>
+							<td class="blueLeft" width = 20%>35-External voltage</td>
+							<td class="blueLeft" width = 20%>36-Charge Current</td>
+						</tr>
+						<tr>
+							<td id="onboardPq32" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq33" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq34" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq35" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq36" width = 20% style="text-align:center;" readonly="readonly"></td>
+						</tr>
+						<tr>
+							<td class="blueLeft" width = 20%>37-Load Current</td>
+							<td class="blueLeft" width = 20%>38-4G REG status</td>
+							<td class="blueLeft" width = 20%>39-4G Signal strength</td>
+							<td class="blueLeft" width = 20%>40-NB-IoT REG status</td>
+							<td class="blueLeft" width = 20%>41-NB-IoT Signal strength</td>
+						</tr>
+						<tr>
+							<td id="onboardPq37" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq38" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq39" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq40" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq41" width = 20% style="text-align:center;" readonly="readonly"></td>
+						</tr>
+						<tr>
+							<td class="blueLeft" width = 20%>42-Reboot times</td>
+							<td class="blueLeft" width = 20%>43-Latitude</td>
+							<td class="blueLeft" width = 20%>44-Longitude</td>
+							<td class="blueLeft" width = 20%>45-GPS Status</td>
+							<td class="blueLeft" width = 20%>46-GPS Speed</td>
+						</tr>
+						<tr>
+							<td id="onboardPq42" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq43" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq44" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq45" width = 20% style="text-align:center;" readonly="readonly"></td>
+							<td id="onboardPq46" width = 20% style="text-align:center;" readonly="readonly"></td>
+						</tr>
+					</tbody>
+				</table>
+				<table id="realData" border="2" style="width: 100%;">
+					<caption><br><h1>Software Physical Quantity Real-Time Values</h1><br></caption>
+					<tbody id="rtPqTb">
+						<br><br>
+					</tbody>
+				</table>
+				<br><br>
+				<table id="Device" border="2" style="width: 100%;">
+					<caption><br><h1>Read Software Physical Quantity History Data<br>(Chrome, Firefox)</h1><br></caption>
+					<tbody>
+						<tr>
+							<td class="blueCenter" width = 20%>Year</td>
+							<td class="blueCenter" width = 20%>Month</td>
+							<td class="blueCenter" width = 20%>Day</td>
+							<td class="blueCenter" width = 20%>Total day(s)</td>
+						</tr>
+						<tr>
+							<td><input type="text" id="Year" style="width: 99%;" class="keyup0"/></td>
+							<td><input type="text" id="Month" style="width: 99%;" class="keyup0"/></td>
+							<td><input type="text" id="Day" style="width: 99%;" class="keyup0"/></td>
+							<td>
+								<select id="Count_day" style="width: 100%;">
+									<option value="1">01</option>
+									<option value="2">02</option>
+									<option value="3">03</option>
+									<option value="4">04</option>
+									<option value="5">05</option>
+									<option value="6">06</option>
+									<option value="7">07</option>
+								</select>
+							</td>
+							<td><button style="width: 100%;background-color:yellow;" onclick="GetSDData_Days()" id="gethistory" ><strong>Get Record Data</strong></button></td>
+						</tr>
+					</tbody>
+				</table>
+				<br><br>
+			</div>
+			<!--------------------------Tab5----------------------------------->
+			<div id="Tab5" style="width:100%;">
+				<br>
+				<br>
+				<br>
+				<br>
+				<fieldset>
+					<legend style="font-size:18px;">Firmware Version</legend>
+					<table border="0" style="width: 100%;">
+						<tbody bgcolor="PowderBlue">
+							<br>
+							<tr>
+								<td id="Deviceguid" colspan=1 bgcolor = "PowderBlue" width = 30% style="text-align:left; font-size:12px;">GUID</td>
+								<td id="M4Guid" colspan=1 bgcolor = "#9CFFFF" width = 70% style="text-align:left; font-size:12px;">No data</td>
+							</tr>
+							<tr>
+								<td>Current version</td>
+								<td id="fwVersion" bgcolor = "#9CFFFF">000</td>
+							</tr>
+						</tbody>
+					</table>
+				</fieldset>
+				<table id="Device" border="2" style="width: 100%;">
+					<caption><br><h1>Debug Functions</h1><br></caption>
+					<tbody>
+						<br><br>
+						<tr>
+							<td><button style="width: 100%;background-color:yellow;" onclick="GetParamFile()"><strong>Get Parameter File</strong></button></td>
+							<td><button style="width: 100%;background-color:yellow;" onclick="DebugMessage()"><strong>Log Messages</strong></button></td>
+							<td><button style="width: 100%;background-color:red;" onclick="setBootParam()"><strong>Enter Firmware Update</strong></button></td>
+						</tr>
+					</tbody>
+				</table>
+				<br>
+				<br>
+			</div>
+			<div id=copyright>
+				<center> Copyright &copy; 2013-2025 AnaSystem Inc. All rights reserved </center>
+			</div>
+		</div>
+		
+		<script>
+			(function () {
+				function loadScriptWithRetry(src, options = {}) {
+					const {
+						maxRetries = 3,
+						delay = 2000,
+						onSuccess = () => {},
+						onFailure = () => {}
+					} = options;
+					let attempts = 0;
+					function tryLoad() {
+						const script = document.createElement('script');
+						script.src = src + '?t=' + Date.now();
+						script.async = true;
+						script.onload = () => {
+							onSuccess(src);
+						};
+						script.onerror = () => {
+							attempts++;
+							if (attempts < maxRetries) {
+								setTimeout(tryLoad, delay);
+							} 
+							else {
+								onFailure(src);
+							}
+						};
+						document.head.appendChild(script);
+					}
+					tryLoad();
+				}
+				const scriptsToLoad = [
+					'General.js',
+					'Tab0.js',
+					'Tab1.js',
+					'Tab2.js',
+					'Tab3.js',
+					'Tab4.js',
+					'Tab5.js'
+				];
+				
+				let loadedCount = 0;
+				function checkAllLoad()
+				{	loadedCount++;
+					if(loadedCount == scriptsToLoad.length)
+					{	const dialog = document.getElementById('downloadDialog');
+						if(dialog)
+							dialog.style.display = 'none';
+						else
+						{	setTimeout(() => {
+								const retryDialog = document.getElementById('downloadDialog');
+								if (retryDialog) retryDialog.style.display = 'none';}, 100);
+						}
+						if(document.readyState === 'loading')
+							document.addEventListener('DOMContentLoaded', Tab0Clicked);
+						else
+							Tab0Clicked();
+					}
+				}
+				scriptsToLoad.forEach(src => {
+					loadScriptWithRetry(src, {
+						maxRetries: 3,
+						delay: 1500,
+						onSuccess: checkAllLoad,
+						onFailure: (s) => {}
+					});
+				});
+			})();
+		</script>
+	</body>
+</html>

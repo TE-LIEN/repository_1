@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"clangd.arguments": [
+			"--compile-commands-dir=d:\\Matt Work\\Development\\Project\\02_SensminiA4Neo\\Firmware\\0B000001\\Keil\\out\\sensminiA4Neo\\Release"
+		],
+		"debug.hideSlowPreLaunchWarning": true,
+		"debug.showInStatusBar": "never"
+	}
+}

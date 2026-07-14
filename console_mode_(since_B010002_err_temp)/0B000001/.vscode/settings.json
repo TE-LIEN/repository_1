@@ -1,0 +1,11 @@
+{
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "C_Cpp.default.defines": [
+    "NUVOTON",
+    "SENSMINIA4_NEO",
+    "RELEASE_VERSION",
+    "HBI_ENABLE=1",
+    "SUPPORT_USB_HOST",
+  ]
+    
+}

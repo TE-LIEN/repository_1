@@ -1,0 +1,18 @@
+{
+  "clangd.arguments": [
+    "--compile-commands-dir=d:\\Matt Work\\Development\\Project\\02_SensminiA4Neo\\Firmware\\0B000001\\Keil\\out\\sensminiA4Neo\\Release"
+  ],
+  "cmake.sourceDirectory": "D:/Matt Work/Development/Project/02_SensminiA4Neo/Firmware/0B000001/Keil/tmp",
+  "debug.hideSlowPreLaunchWarning": true,
+  "debug.showInStatusBar": "never",
+  "C_Cpp.default.defines": [
+    "NUVOTON",
+    "SENSMINIA4_NEO",
+    "RELEASE_VERSION",
+    "HBI_ENABLE=1",
+    "SUPPORT_USB_HOST"
+  ],
+  "C_Cpp.default.customConfigurationVariables": {
+
+  }
+}

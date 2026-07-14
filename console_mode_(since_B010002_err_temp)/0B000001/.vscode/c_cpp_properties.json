@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "Src",
+                "Src/headers",
+                "../Library/StdDriver/inc",
+                "../ThirdParty/FreeRTOS/Source",
+                "../ThirdParty/FreeRTOS/Source/include",
+                "../ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F",
+                "../Library/Device/Nuvoton/m460/Include",
+                "../Library/CMSIS/Include",
+                "../Kernel/OSA",
+                "../ThirdParty/lwip/src/include",
+                "../ThirdParty/lwip/ports/include",
+                "../ThirdParty/littleFs",
+                "../Library/UsbHostLib/inc",
+                "Src/FatFs/src"
+            ],
+            "windowsSdkVersion": "10.0.26100.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

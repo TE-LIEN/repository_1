@@ -1,0 +1,30 @@
+# 忽略 Keil 產生的編譯暫存檔
+*.crf
+*.o
+*.d
+*.axf
+*.htm
+*.dep
+*.lnp
+Listings/
+Objects/
+
+# 忽略 IAR 產生的編譯暫存檔
+Debug/
+Release/
+*.pbi
+*.pbd
+
+# 忽略 VS Code 的本地設定
+.vscode/
+
+# --- 以下是例外規則（放行特定重要檔案，順序很重要！） ---
+
+# 1. 絕對不能忽略 Keil 的關鍵專案檔與設定檔
+!*.uvprojx
+!*.uvoptx
+!*.uvguix
+
+# 2. 允許 Git 讀取 FreeRTOS 底下的 Objects 目錄並放行 lib 檔案
+!**/FreeRTOS/Objects/
+!*freeRTOSLib.lib

@@ -1,0 +1,7 @@
+../../Library/StdDriver/src/pdma.c -E -xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c
+-fno-rtti -funsigned-char -fshort-enums -fshort-wchar
+-D__MICROLIB -gdwarf-4 -fno-function-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Src/headers -I ../../Library/StdDriver/inc -I ../Src -I ../../ThirdParty/FreeRTOS/Source -I ../../ThirdParty/FreeRTOS/Source/include -I ../../ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../../Library/Device/Nuvoton/m460/Include -I ../../Library/CMSIS/Include -I ../../Kernel/OSA -I ../../ThirdParty/lwip/src/include -I ../../ThirdParty/lwip/ports/include -I ../../ThirdParty/littleFs -I ../../Library/UsbHostLib/inc -I ../Src/FatFs/src
+-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include
+-IC:/Keil_v5/ARM/CMSIS/Include
+-D__UVISION_VERSION="541" -DSENSMINIA4_PRO -DRELEASE_VERSION -DNUVOTON -DHBI_ENABLE="1" -DSUPPORT_USB_HOST
+-o ./listings/pdma.i

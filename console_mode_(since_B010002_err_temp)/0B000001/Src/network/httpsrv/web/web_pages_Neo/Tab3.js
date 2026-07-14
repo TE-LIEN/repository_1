@@ -1,0 +1,332 @@
+function Tab3Clicked()
+{
+	document.getElementsByTagName("span")[0].style.color="black";
+  document.getElementsByTagName("span")[1].style.color="black";
+  document.getElementsByTagName("span")[2].style.color="black";
+  document.getElementsByTagName("span")[3].style.color="blue";
+  document.getElementsByTagName("span")[4].style.color="black";
+  document.getElementsByTagName("span")[5].style.color="black";
+	//clearTimeout(DTTimer);
+	clearTimeout(RTValue);
+	clearTimeout(DBGTimer);
+	if(login_ok == 1)
+	{	if(DtTimerStop)
+		{	DtTimerStop = false;
+			DTTimer=setTimeout("UpdateTime()", 1000);
+		}
+		Tab0.style.display='none';
+		Tab1.style.display='none';	
+		Tab2.style.display='none';
+		Tab3.style.display='';		
+		Tab4.style.display='none';
+		Tab5.style.display='none';
+    SetSelectedValueByID("AI_Number", 0);
+    if(isSu == 2)
+    {	setTableDisplay("doMapBoard", 1);
+    }
+    UpdateNodeDatapage();	
+	}
+	else
+	{	setTableDisplay("doMapBoard", 0);
+		if(doMapPanel.style.maxHeight != null && doMapPanel.style.maxHeight != 0)
+			doMapBoard.click();
+		Tab0.style.display='none';		
+		Tab1.style.display='none';
+		Tab2.style.display='none';
+		Tab3.style.display='none';
+		Tab4.style.display='none';
+		Tab5.style.display='none';
+	}	
+}
+function UpdateNodeData(coef)
+{
+	var sep = "|";
+	var data = "1" + sep;	
+  var formula_id = coef.selectedIndex;
+  coef.focus();	
+  data += strToInt(formula_id);
+  if(makeRequest("GetNodeParam.cgi", data) == -2)
+  {	setTimeout("UpdateNodeData(coef)", 400);
+  }
+}
+
+function GetNodeParam1()
+{	var sep = "|";
+	var data = "5" + sep;				
+	
+	if(makeRequest("GetNodeParam.cgi", data) == -2)
+	{	setTimeout("GetNodeParam1()", 400);
+	}
+}
+function UpdateNodeDatapage()
+{
+	var sep = "|";
+	var data = "1" + sep + "0";	
+  if(makeRequest("GetNodeParam.cgi", data) == -2)
+  {	setTimeout("UpdateNodeDatapage()", 400);
+  }
+}
+/*function checkcompare()
+{
+	if((DO_Enable_0.checked == 1) && (DO_0_Output.checked == 1))
+	{
+		alert("DO 0 should be enabled only by AI or main power.");
+		return false; 		
+	}
+	if((DO_Enable_2.checked == 1) && (DO_1_Output.checked == 1))
+	{
+		alert("DO 1 should be enabled only by AI or main power.");
+		return false; 		
+	}	
+	if ((DO_Enable_0.checked == 1) && (parseFloat(Bat_low_0.value) - parseFloat(Bat_high_0.value) >= 0))      
+	{ 
+		alert("DO 0 setting error: Bat.Low >= Bat.High");
+		return false; 
+	}
+	if ((DO_Enable_1.checked == 1) && (parseFloat(Bat_low_1.value) - parseFloat(Bat_high_1.value) >= 0))      
+	{ 
+		alert("DO 1 setting error: Bat.Low >= Bat.High");
+		return false; 
+	}
+	if ((DO_Enable_2.checked == 1) && (parseFloat(Bat_low_2.value) - parseFloat(Bat_high_2.value) >= 0))      
+	{ 
+		alert("DO 2 setting error: Bat.Low >= Bat.High");
+		return false; 
+	}
+	if ((DO_Enable_3.checked == 1) && (parseFloat(Bat_low_3.value) - parseFloat(Bat_high_3.value) >= 0))      
+	{ 
+		alert("DO 3 setting error: Bat.Low >= Bat.High");
+		return false; 
+	}
+	return true;
+}*/
+/*function checkDO_0_1()
+{
+	var result = 1;
+	for(var i = 0; i <= 7; i++)
+	{		
+    result = eval('if(Power' + i + '_DO_0.checked && Power' + i + '_DO_1.checked) {0;}else{1;}');
+    if(!result)
+    {
+    	eval('alert("Ch' + i + ' should not be supplied power by both DO_0 and DO_1.");'); 
+    	return false;
+    }
+  }
+  return true;
+}*/
+function SaveNodeParam(skip=false)
+{
+	var sep = "|";
+	var data = "3" + sep; 
+	data += GetSelectedValueByID("AI_Number") + sep;
+	//if (!checkDO_0_1())	return;
+	for(var i = 0; i <= 7; i++)
+	{	var enable = document.getElementById("Channel_Enable_" + i);
+		var alias = document.getElementById("Alias_" + i);
+		var srv2Alias = document.getElementById("srv2Alias_" + i);
+		
+		if(enable.checked)
+		{	eval('data += 1 + sep;');
+			eval('data += Device_no_' + i + '.value + sep;');
+			eval('data += Item_num_' + i + '.value + sep;');
+			eval('data += EQN_' + i + '.value + sep;');
+			eval('data += Filter_Enable_' + i + '.value + sep;');
+			//data += 0 + sep + 0 + sep;
+			if(alias.value != "")
+				data += alias.value + sep;
+			else
+				data += 0 + sep;
+			if(srv2Alias.value !="")
+				data += srv2Alias.value + sep;
+			else
+				data += 0 + sep;
+		}
+		else
+		{	data += 0 + sep + 0 + sep + 0 + sep + 0 + sep + 0 + sep + 0 + sep + 0 + sep;
+		}
+	}
+	var confirmClick=true;
+	if(!skip)
+	{	if(!extend())
+		{	setTimeout("SaveNodeParam()", 200);
+			return;
+		}
+  	confirmClick = settingAsk();
+	}
+	if(confirmClick)
+  {	if(makeRequest("SaveNodeParam.cgi", data) == -2)
+  	{	setTimeout("SaveNodeParam(true)", 400);
+  	}
+  }
+  else
+	{	extendFinish();
+	}
+}
+function SaveDoParam(skip=false)
+{
+  //if (!checkcompare())        return;			
+	var sep = "|";
+  //var blank = "%";
+  var blank = "!";
+	var data = "4" + sep; 
+	/*for(var i = 0; i < 4; i++)
+	{
+		eval('if(DO_Enable_' + i + '.checked) {data += 1 + sep;} else {data += 0 + sep;}');
+		eval('data += Software_no_' + i + '.value + blank');	
+		eval('data += Bat_low_' + i + '.value + blank');
+		eval('data += Bat_high_' + i + '.value + blank');
+		eval('data += GetSelectedValueByID("DO_Mode_' + i + '") + sep');
+	}	*/			
+  if(DO_0_Output.checked) {data += 1 + sep;} else {data += 0 + sep;}
+	if(DO_1_Output.checked) {data += 1 + sep;} else {data += 0 + sep;}
+	if(DO_5V_Output.checked) {data += 1 + sep;} else {data += 0 + sep;}
+	data += GetSelectedValueByID("DO_Master_Mode_0");
+	
+	var confirmClick=true;
+	if(!skip)
+	{	if(!extend())
+		{	setTimeout("SaveDoParam()", 200);
+			return;
+		}
+		confirmClick = settingAsk();
+	}
+	if(confirmClick)
+  {	if(makeRequest("SaveDOParam.cgi", data) == -2)
+  	{	setTimeout("SaveDoParam(true)", 400);
+  	}
+  }
+  else
+  {	extendFinish();
+  }
+}
+function CoefChange(coef)
+{
+	var sep = "|";
+	var data = "1" + sep;
+  var formula_id = coef.selectedIndex;
+  coef.focus();
+	data += strToInt(formula_id);		
+	if(makeRequest("GetCoef.cgi", data) == -2)
+	{	setTimeout("CoefChange(coef)", 400);
+	}
+}
+function CoefChange_1(coef)
+{
+	var sep = "|";
+	var data = "3" + sep;
+  var formula_id = coef.selectedIndex;
+  coef.focus();
+	data += strToInt(formula_id+10);	
+	if(makeRequest("GetCoef.cgi", data) == -2)
+	{	setTimeout("CoefChange_1(coef)", 400);
+	}
+}
+function SaveFormulaParam(skip=false)
+{
+  var sep = "|";
+  var blank = "!";
+  var data = "7" + sep;
+  data += GetSelectedValueByID("Coef_Number") + sep;
+  data += Coef_A.value + blank;   	
+  data += Coef_B.value + blank; 
+  data += Coef_C.value; 
+  
+  var confirmClick=true;
+  if(!skip)
+  {	if(!extend())
+		{	setTimeout("SaveFormulaParam()", 200);
+			return;
+		}
+  	confirmClick = settingAsk();
+  }
+  if(confirmClick)
+  {	if(makeRequest("SaveFormulaParam.cgi", data) == -2)
+  	{	setTimeout("SaveFormulaParam(true)", 400);
+  	}
+  }
+  else
+  {	extendFinish();
+  }
+}
+function SaveFormulaParam_1(skip=false)
+{
+  var sep = "|";
+  var blank = "!";
+  var data = "9" + sep;
+  data += GetSelectedValueByID("Coef_Number_1") + sep;
+  data += Coef_A_1.value + blank;   	
+  data += Coef_B_1.value; 
+  var confirmClick=true;
+  if(!skip)
+  {	if(!extend())
+		{	setTimeout("SaveFormulaParam_1()", 200);
+			return;
+		}
+  	confirmClick = settingAsk();
+  }
+  if(confirmClick)
+  {	if(makeRequest("SaveFormulaParam.cgi", data) == -2)
+  	{	setTimeout("SaveFormulaParam_1(true)", 400);
+  	}
+  }
+  else
+  {	extendFinish();
+  }
+}
+function doMapChg(idx)
+{	var selects = document.getElementsByClassName("doMapSel");
+
+	var used1 = -1; // which one use index 1
+	var used2 = -1; // which one use index 2
+	
+	//scan current selected
+	for(var i = 0; i < selects.length; i++) 
+	{	if(selects[i].selectedIndex === 1) 
+		{	used1 = i;
+		}
+		if(selects[i].selectedIndex === 2) 
+		{	used2 = i;
+		}
+	}
+	for(var i = 0; i < selects.length; i++) 
+	{	var sel = selects[i];
+		// restore all
+		for(var j = 0; j < sel.options.length; j++) 
+		{	sel.options[j].disabled = false;
+		}
+
+		// limit index 1(DO-0)
+		if(used1 !== -1 && used1 !== i) 
+			sel.options[1].disabled = true;
+		// limit index 2(DO-1)
+		if(used2 !== -1 && used2 !== i) 
+			sel.options[2].disabled = true;
+	}
+}
+function saveDoMap(skip=false)
+{	var sep = "|";
+  var blank = "!";
+	var data = "10" + sep; 
+
+	data += GetSelectedValueByID("doMapSel0") + sep;
+	data += GetSelectedValueByID("doMapSel1") + sep;
+	data += GetSelectedValueByID("doMapSel2") + sep;
+	data += GetSelectedValueByID("doMapSel3") + sep;
+	
+	var confirmClick=true;
+	if(!skip)
+	{	if(!extend())
+		{	setTimeout("SaveDOMap()", 200);
+			return;
+		}
+		confirmClick = settingAsk();
+	}
+	if(confirmClick)
+  {	if(makeRequest("SaveDOMap.cgi", data) == -2)
+  	{	setTimeout("saveDoMap(true)", 400);
+  	}
+  }
+  else
+  {	extendFinish();
+  }
+}

@@ -1,0 +1,34 @@
+build-idx:
+  generated-by: csolution version 2.12.0
+  csolution: HSUSBH_USBH_UVC.csolution.yml
+  tmpdir: tmp
+  cprojects:
+    - cproject: HSUSBH_USBH_UVC.cproject.yml
+  cbuilds:
+    - cbuild: out/HSUSBH_USBH_UVC/ARMCLANG/debug/HSUSBH_USBH_UVC.debug+ARMCLANG.cbuild.yml
+      project: HSUSBH_USBH_UVC
+      configuration: .debug+ARMCLANG
+      messages:
+        errors:
+          - HSUSBH_USBH_UVC.cproject.yml:31:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/Device/Nuvoton/m460/Source/ARM/startup_m460.S' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:35:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/Device/Nuvoton/m460/Source/system_m460.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:46:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/StdDriver/src/clk.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:49:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/StdDriver/src/gpio.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:50:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/StdDriver/src/hbi.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:45:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/StdDriver/src/retarget.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:51:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/StdDriver/src/sdh.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:47:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/StdDriver/src/sys.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:48:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/StdDriver/src/uart.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:54:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/UsbHostLib/src_core/ehci.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:55:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/UsbHostLib/src_core/ehci_iso.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:56:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/UsbHostLib/src_core/hub.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:57:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/UsbHostLib/src_core/mem_alloc.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:58:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/UsbHostLib/src_core/ohci.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:59:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/UsbHostLib/src_core/usb_core.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:62:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/UsbHostLib/src_uvc/uvc_core.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:63:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/UsbHostLib/src_uvc/uvc_driver.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:64:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/Library/UsbHostLib/src_uvc/uvc_parser.c' was not found
+          - HSUSBH_USBH_UVC.cproject.yml:67:11 - file 'D:/Matt Work/Development/Project/02_SensminiA4Neo/ThirdParty/FatFs/source/ff.c' was not found
+        info:
+          - HSUSBH_USBH_UVC.cbuild-pack.yml - file is already up-to-date
+          - HSUSBH_USBH_UVC.debug+ARMCLANG.cbuild.yml - file is already up-to-date

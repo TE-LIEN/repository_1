@@ -1,0 +1,24 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\Library\\CryptoAccelerator\\IAR\\crypto_accelerator.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\Library\\CryptoAccelerator\\IAR\\crypto_accelerator.eww": {
+      "configs": {
+        "${workspaceFolder}\\Library\\CryptoAccelerator\\IAR\\crypto_accelerator.ewp": "Release"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\Library\\CryptoAccelerator\\IAR\\crypto_accelerator.ewp"
+      }
+    }
+  },
+  "configs": {
+    "${workspaceFolder}\\Library\\CMSIS\\RTOS2\\RTX\\Library\\IAR\\IDE\\RTX_CM.ewp": "CM0",
+    "${workspaceFolder}\\Library\\CMSIS\\RTOS\\RTX\\SRC\\IAR\\RTX_Lib_CM.ewp": "CM0_LE",
+    "${workspaceFolder}\\Library\\CryptoAccelerator\\IAR\\crypto_accelerator.ewp": "Release",
+    "${workspaceFolder}\\Library\\HSUSBH_USBH_UVC\\IAR\\HSUSBH_USBH_UVC.ewp": "Release"
+  },
+  "project": {
+    "path": "${workspaceFolder}\\Library\\CMSIS\\RTOS2\\RTX\\Library\\IAR\\IDE\\RTX_CM.ewp"
+  }
+}

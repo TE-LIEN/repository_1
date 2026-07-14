@@ -1,0 +1,1625 @@
+Dependencies for Project 'mbedTls', Target 'MBEDTLS': (DO NOT MODIFY !)
+CompilerVersion: 6220000::V6.22::ARMCLANG
+F (.\include\mbedtls\aes.h)(0x694B5F04)()
+F (.\include\mbedtls\aria.h)(0x694B5F04)()
+F (.\include\mbedtls\asn1.h)(0x694B5F04)()
+F (.\include\mbedtls\asn1write.h)(0x694B5F04)()
+F (.\include\mbedtls\base64.h)(0x694B5F04)()
+F (.\include\mbedtls\bignum.h)(0x694B5F04)()
+F (.\include\mbedtls\build_info.h)(0x69857072)()
+F (.\include\mbedtls\camellia.h)(0x694B5F04)()
+F (.\include\mbedtls\ccm.h)(0x694B5F04)()
+F (.\include\mbedtls\chacha20.h)(0x694B5F04)()
+F (.\include\mbedtls\chachapoly.h)(0x694B5F04)()
+F (.\include\mbedtls\check_config.h)(0x694B5F04)()
+F (.\include\mbedtls\cipher.h)(0x694B5F04)()
+F (.\include\mbedtls\cmac.h)(0x694B5F04)()
+F (.\include\mbedtls\compat-2.x.h)(0x694B5F04)()
+F (.\include\mbedtls\config_psa.h)(0x694B5F04)()
+F (.\include\mbedtls\constant_time.h)(0x694B5F04)()
+F (.\include\mbedtls\ctr_drbg.h)(0x694B5F04)()
+F (.\include\mbedtls\debug.h)(0x694B5F04)()
+F (.\include\mbedtls\des.h)(0x694B5F04)()
+F (.\include\mbedtls\dhm.h)(0x694B5F04)()
+F (.\include\mbedtls\ecdh.h)(0x694B5F04)()
+F (.\include\mbedtls\ecdsa.h)(0x694B5F04)()
+F (.\include\mbedtls\ecjpake.h)(0x694B5F04)()
+F (.\include\mbedtls\ecp.h)(0x694B5F04)()
+F (.\include\mbedtls\entropy.h)(0x694B5F04)()
+F (.\include\mbedtls\error.h)(0x694B5F04)()
+F (.\include\mbedtls\gcm.h)(0x694B5F04)()
+F (.\include\mbedtls\hkdf.h)(0x694B5F04)()
+F (.\include\mbedtls\hmac_drbg.h)(0x694B5F04)()
+F (.\include\mbedtls\md.h)(0x694B5F04)()
+F (.\include\mbedtls\md5.h)(0x694B5F04)()
+F (.\include\mbedtls\memory_buffer_alloc.h)(0x694B5F04)()
+F (.\include\mbedtls\net_sockets.h)(0x694B5F04)()
+F (.\include\mbedtls\nist_kw.h)(0x694B5F04)()
+F (.\include\mbedtls\oid.h)(0x694B5F04)()
+F (.\include\mbedtls\pem.h)(0x694B5F04)()
+F (.\include\mbedtls\pk.h)(0x694B5F04)()
+F (.\include\mbedtls\pkcs5.h)(0x694B5F04)()
+F (.\include\mbedtls\pkcs12.h)(0x694B5F04)()
+F (.\include\mbedtls\platform.h)(0x694B5F04)()
+F (.\include\mbedtls\platform_time.h)(0x694B5F04)()
+F (.\include\mbedtls\platform_util.h)(0x694B5F04)()
+F (.\include\mbedtls\poly1305.h)(0x694B5F04)()
+F (.\include\mbedtls\private_access.h)(0x694B5F04)()
+F (.\include\mbedtls\psa_util.h)(0x694B5F04)()
+F (.\include\mbedtls\ripemd160.h)(0x694B5F04)()
+F (.\include\mbedtls\rsa.h)(0x694B5F04)()
+F (.\include\mbedtls\sha1.h)(0x694B5F04)()
+F (.\include\mbedtls\sha256.h)(0x694B5F04)()
+F (.\include\mbedtls\sha512.h)(0x694B5F04)()
+F (.\include\mbedtls\ssl.h)(0x694B5F04)()
+F (.\include\mbedtls\ssl_cache.h)(0x694B5F04)()
+F (.\include\mbedtls\ssl_ciphersuites.h)(0x694B5F04)()
+F (.\include\mbedtls\ssl_cookie.h)(0x694B5F04)()
+F (.\include\mbedtls\ssl_ticket.h)(0x694B5F04)()
+F (.\include\mbedtls\threading.h)(0x694B5F04)()
+F (.\include\mbedtls\timing.h)(0x694B5F04)()
+F (.\include\mbedtls\version.h)(0x694B5F04)()
+F (.\include\mbedtls\x509.h)(0x694B5F04)()
+F (.\include\mbedtls\x509_crl.h)(0x694B5F04)()
+F (.\include\mbedtls\x509_crt.h)(0x694B5F04)()
+F (.\include\mbedtls\x509_csr.h)(0x694B5F04)()
+F (.\include\mbedtls\xxxxmbedtls_config.h)(0x694B5F04)()
+F (.\library\aes.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/aes.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\aes.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (port\nuvoton\aes_alt.h)(0x62A89A10)
+I (include\mbedtls\platform.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (library\padlock.h)(0x694B5F04)
+I (library\aesni.h)(0x694B5F04)
+F (.\library\aesni.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/aesni.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (library\aesni.h)(0x694B5F04)
+I (include\mbedtls\aes.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (port\nuvoton\aes_alt.h)(0x62A89A10)
+F (.\library\aesni.h)(0x694B5F04)()
+F (.\library\aria.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/aria.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\asn1parse.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/asn1parse.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\asn1write.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/asn1write.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\asn1write.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\base64.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/base64.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\base64.h)(0x694B5F04)
+I (library\constant_time_internal.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (library\ssl_misc.h)(0x694B5F04)
+I (include\mbedtls\ssl.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\ssl_ciphersuites.h)(0x694B5F04)
+I (include\mbedtls\pk.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\x509_crt.h)(0x694B5F04)
+I (include\mbedtls\x509.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\x509_crl.h)(0x694B5F04)
+I (include\mbedtls\dhm.h)(0x694B5F04)
+I (include\mbedtls\ecdh.h)(0x694B5F04)
+I (include\mbedtls\md5.h)(0x694B5F04)
+I (include\mbedtls\sha1.h)(0x694B5F04)
+I (port\nuvoton\sha1_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha1_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha256.h)(0x694B5F04)
+I (port\nuvoton\sha256_alt.h)(0x62A89A10)
+I (port\nuvoton\sha256_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha512.h)(0x694B5F04)
+I (port\nuvoton\sha512_alt.h)(0x62A89A10)
+I (port\nuvoton\sha512_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\bignum.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/bignum.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (library\bn_mul.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (library\constant_time_internal.h)(0x694B5F04)
+I (library\ssl_misc.h)(0x694B5F04)
+I (include\mbedtls\ssl.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\ssl_ciphersuites.h)(0x694B5F04)
+I (include\mbedtls\pk.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\x509_crt.h)(0x694B5F04)
+I (include\mbedtls\x509.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\x509_crl.h)(0x694B5F04)
+I (include\mbedtls\dhm.h)(0x694B5F04)
+I (include\mbedtls\ecdh.h)(0x694B5F04)
+I (include\mbedtls\md5.h)(0x694B5F04)
+I (include\mbedtls\sha1.h)(0x694B5F04)
+I (port\nuvoton\sha1_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha1_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha256.h)(0x694B5F04)
+I (port\nuvoton\sha256_alt.h)(0x62A89A10)
+I (port\nuvoton\sha256_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha512.h)(0x694B5F04)
+I (port\nuvoton\sha512_alt.h)(0x62A89A10)
+I (port\nuvoton\sha512_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\bn_mul.h)(0x694B5F04)()
+F (.\library\camellia.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/camellia.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\ccm.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ccm.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\ccm.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\chacha20.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/chacha20.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\chachapoly.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/chachapoly.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\check_crypto_config.h)(0x694B5F04)()
+F (.\library\cipher.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/cipher.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (library\cipher_wrap.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\constant_time.h)(0x694B5F04)
+I (include\mbedtls\gcm.h)(0x694B5F04)
+I (include\mbedtls\ccm.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\cipher_wrap.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/cipher_wrap.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (library\cipher_wrap.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\aes.h)(0x694B5F04)
+I (port\nuvoton\aes_alt.h)(0x62A89A10)
+I (include\mbedtls\des.h)(0x694B5F04)
+I (include\mbedtls\gcm.h)(0x694B5F04)
+I (include\mbedtls\ccm.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\cipher_wrap.h)(0x694B5F04)()
+F (.\library\cmac.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/cmac.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\CMakeLists.txt)(0x694B5F04)()
+F (.\library\common.h)(0x694B5F04)()
+F (.\library\constant_time.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/constant_time.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (library\constant_time_internal.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (library\ssl_misc.h)(0x694B5F04)
+I (include\mbedtls\ssl.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\ssl_ciphersuites.h)(0x694B5F04)
+I (include\mbedtls\pk.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\x509_crt.h)(0x694B5F04)
+I (include\mbedtls\x509.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\x509_crl.h)(0x694B5F04)
+I (include\mbedtls\dhm.h)(0x694B5F04)
+I (include\mbedtls\ecdh.h)(0x694B5F04)
+I (include\mbedtls\md5.h)(0x694B5F04)
+I (include\mbedtls\sha1.h)(0x694B5F04)
+I (port\nuvoton\sha1_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha1_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha256.h)(0x694B5F04)
+I (port\nuvoton\sha256_alt.h)(0x62A89A10)
+I (port\nuvoton\sha256_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha512.h)(0x694B5F04)
+I (port\nuvoton\sha512_alt.h)(0x62A89A10)
+I (port\nuvoton\sha512_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\constant_time.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (library\constant_time_invasive.h)(0x694B5F04)
+F (.\library\constant_time_internal.h)(0x694B5F04)()
+F (.\library\constant_time_invasive.h)(0x694B5F04)()
+F (.\library\ctr_drbg.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ctr_drbg.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\ctr_drbg.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\aes.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (port\nuvoton\aes_alt.h)(0x62A89A10)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\debug.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/debug.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\des.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/des.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\des.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\dhm.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/dhm.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\dhm.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\pem.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\ecdh.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ecdh.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\ecdh.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (library\ecdh_misc.h)(0x694B5F04)
+F (.\library\ecdh_misc.h)(0x694B5F04)()
+F (.\library\ecdsa.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ecdsa.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\asn1write.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\hmac_drbg.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+F (.\library\ecjpake.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ecjpake.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\ecp.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ecp.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\threading.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (library\bn_mul.h)(0x694B5F04)
+I (library\ecp_invasive.h)(0x694B5F04)
+F (.\library\ecp_curves.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ecp_curves.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (library\bn_mul.h)(0x694B5F04)
+I (library\ecp_invasive.h)(0x694B5F04)
+F (.\library\ecp_internal_alt.h)(0x694B5F04)()
+F (.\library\ecp_invasive.h)(0x694B5F04)()
+F (.\library\entropy.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/entropy.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\entropy.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\sha512.h)(0x694B5F04)
+I (port\nuvoton\sha512_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha512_alt_sw.h)(0x62A89A10)
+I (library\entropy_poll.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\entropy_poll.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/entropy_poll.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\entropy.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\sha512.h)(0x694B5F04)
+I (port\nuvoton\sha512_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha512_alt_sw.h)(0x62A89A10)
+I (library\entropy_poll.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+F (.\library\entropy_poll.h)(0x694B5F04)()
+F (.\library\error.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/error.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\aes.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (port\nuvoton\aes_alt.h)(0x62A89A10)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\base64.h)(0x694B5F04)
+I (include\mbedtls\ccm.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\ctr_drbg.h)(0x694B5F04)
+I (include\mbedtls\des.h)(0x694B5F04)
+I (include\mbedtls\dhm.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\entropy.h)(0x694B5F04)
+I (include\mbedtls\sha512.h)(0x694B5F04)
+I (port\nuvoton\sha512_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha512_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\gcm.h)(0x694B5F04)
+I (include\mbedtls\hkdf.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\hmac_drbg.h)(0x694B5F04)
+I (include\mbedtls\oid.h)(0x694B5F04)
+I (include\mbedtls\pk.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (include\mbedtls\pem.h)(0x694B5F04)
+I (include\mbedtls\pkcs12.h)(0x694B5F04)
+I (include\mbedtls\pkcs5.h)(0x694B5F04)
+I (include\mbedtls\poly1305.h)(0x694B5F04)
+I (include\mbedtls\sha1.h)(0x694B5F04)
+I (port\nuvoton\sha1_alt.h)(0x62A89A10)
+I (port\nuvoton\sha1_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha256.h)(0x694B5F04)
+I (port\nuvoton\sha256_alt.h)(0x62A89A10)
+I (port\nuvoton\sha256_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\ssl.h)(0x694B5F04)
+I (include\mbedtls\ssl_ciphersuites.h)(0x694B5F04)
+I (include\mbedtls\x509_crt.h)(0x694B5F04)
+I (include\mbedtls\x509.h)(0x694B5F04)
+I (include\mbedtls\x509_crl.h)(0x694B5F04)
+I (include\mbedtls\ecdh.h)(0x694B5F04)
+F (.\library\gcm.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/gcm.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\gcm.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (library\aesni.h)(0x694B5F04)
+I (include\mbedtls\aes.h)(0x694B5F04)
+I (port\nuvoton\aes_alt.h)(0x62A89A10)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\hkdf.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/hkdf.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\hkdf.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+F (.\library\hmac_drbg.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/hmac_drbg.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\hmac_drbg.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\md.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/md.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (library\md_wrap.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\md5.h)(0x694B5F04)
+I (include\mbedtls\ripemd160.h)(0x694B5F04)
+I (include\mbedtls\sha1.h)(0x694B5F04)
+I (port\nuvoton\sha1_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha1_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha256.h)(0x694B5F04)
+I (port\nuvoton\sha256_alt.h)(0x62A89A10)
+I (port\nuvoton\sha256_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha512.h)(0x694B5F04)
+I (port\nuvoton\sha512_alt.h)(0x62A89A10)
+I (port\nuvoton\sha512_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\md_wrap.h)(0x694B5F04)()
+F (.\library\md5.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/md5.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\md5.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\memory_buffer_alloc.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/memory_buffer_alloc.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\mps_common.h)(0x694B5F04)()
+F (.\library\mps_error.h)(0x694B5F04)()
+F (.\library\mps_reader.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/mps_reader.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\mps_reader.h)(0x694B5F04)()
+F (.\library\mps_trace.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/mps_trace.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\mps_trace.h)(0x694B5F04)()
+F (.\library\net_sockets.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/net_sockets.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\nist_kw.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/nist_kw.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\oid.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/oid.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\oid.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\pk.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\padlock.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/padlock.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (library\padlock.h)(0x694B5F04)
+I (include\mbedtls\aes.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (port\nuvoton\aes_alt.h)(0x62A89A10)
+F (.\library\padlock.h)(0x694B5F04)()
+F (.\library\pem.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/pem.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\pem.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\base64.h)(0x694B5F04)
+I (include\mbedtls\des.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\aes.h)(0x694B5F04)
+I (port\nuvoton\aes_alt.h)(0x62A89A10)
+I (include\mbedtls\md5.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\pk.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/pk.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\pk.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (library\pk_wrap.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+F (.\library\pk_wrap.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/pk_wrap.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (library\pk_wrap.h)(0x694B5F04)
+I (include\mbedtls\pk.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\pk_wrap.h)(0x694B5F04)()
+F (.\library\pkcs5.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/pkcs5.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\pkcs5.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\oid.h)(0x694B5F04)
+I (include\mbedtls\pk.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\pkcs12.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/pkcs12.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\pkcs12.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\des.h)(0x694B5F04)
+F (.\library\pkparse.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/pkparse.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\pk.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\oid.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\pem.h)(0x694B5F04)
+I (include\mbedtls\pkcs5.h)(0x694B5F04)
+I (include\mbedtls\pkcs12.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\pkwrite.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/pkwrite.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\pk.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (include\mbedtls\ecdsa.h)(0x694B5F04)
+I (include\mbedtls\asn1write.h)(0x694B5F04)
+I (include\mbedtls\asn1.h)(0x694B5F04)
+I (include\mbedtls\oid.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\pem.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\platform.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/platform.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+F (.\library\platform_util.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/platform_util.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\threading.h)(0x694B5F04)
+F (.\library\poly1305.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/poly1305.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\poly1305.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\psa_crypto.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\psa_crypto_aead.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_aead.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\psa_crypto_aead.h)(0x694B5F04)()
+F (.\library\psa_crypto_cipher.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_cipher.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\psa_crypto_cipher.h)(0x694B5F04)()
+F (.\library\psa_crypto_client.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_client.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\psa\crypto.h)(0x694B5F04)
+I (include\psa\crypto_platform.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\config_psa.h)(0x694B5F04)
+I (include\psa\crypto_types.h)(0x694B5F04)
+I (include\psa\crypto_values.h)(0x694B5F04)
+I (include\psa\crypto_sizes.h)(0x694B5F04)
+I (include\psa\crypto_struct.h)(0x694B5F04)
+I (include\mbedtls\cmac.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\gcm.h)(0x694B5F04)
+I (include\mbedtls\ccm.h)(0x694B5F04)
+I (include\mbedtls\chachapoly.h)(0x694B5F04)
+I (include\mbedtls\poly1305.h)(0x694B5F04)
+I (include\mbedtls\chacha20.h)(0x694B5F04)
+I (include\psa\crypto_driver_contexts_primitives.h)(0x694B5F04)
+I (include\psa\crypto_driver_common.h)(0x694B5F04)
+I (include\psa\crypto_builtin_primitives.h)(0x694B5F04)
+I (include\mbedtls\md5.h)(0x694B5F04)
+I (include\mbedtls\ripemd160.h)(0x694B5F04)
+I (include\mbedtls\sha1.h)(0x694B5F04)
+I (port\nuvoton\sha1_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha1_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha256.h)(0x694B5F04)
+I (port\nuvoton\sha256_alt.h)(0x62A89A10)
+I (port\nuvoton\sha256_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha512.h)(0x694B5F04)
+I (port\nuvoton\sha512_alt.h)(0x62A89A10)
+I (port\nuvoton\sha512_alt_sw.h)(0x62A89A10)
+I (include\psa\crypto_driver_contexts_composites.h)(0x694B5F04)
+I (include\psa\crypto_builtin_composites.h)(0x694B5F04)
+I (include\psa\crypto_extra.h)(0x694B5F04)
+I (include\psa\crypto_compat.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+F (.\library\psa_crypto_core.h)(0x694B5F04)()
+F (.\library\psa_crypto_driver_wrappers.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_driver_wrappers.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (library\psa_crypto_aead.h)(0x694B5F04)
+I (include\psa\crypto.h)(0x694B5F04)
+I (include\psa\crypto_platform.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\config_psa.h)(0x694B5F04)
+I (include\psa\crypto_types.h)(0x694B5F04)
+I (include\psa\crypto_values.h)(0x694B5F04)
+I (include\psa\crypto_sizes.h)(0x694B5F04)
+I (include\psa\crypto_struct.h)(0x694B5F04)
+I (include\mbedtls\cmac.h)(0x694B5F04)
+I (include\mbedtls\cipher.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\gcm.h)(0x694B5F04)
+I (include\mbedtls\ccm.h)(0x694B5F04)
+I (include\mbedtls\chachapoly.h)(0x694B5F04)
+I (include\mbedtls\poly1305.h)(0x694B5F04)
+I (include\mbedtls\chacha20.h)(0x694B5F04)
+I (include\psa\crypto_driver_contexts_primitives.h)(0x694B5F04)
+I (include\psa\crypto_driver_common.h)(0x694B5F04)
+I (include\psa\crypto_builtin_primitives.h)(0x694B5F04)
+I (include\mbedtls\md5.h)(0x694B5F04)
+I (include\mbedtls\ripemd160.h)(0x694B5F04)
+I (include\mbedtls\sha1.h)(0x694B5F04)
+I (port\nuvoton\sha1_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha1_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha256.h)(0x694B5F04)
+I (port\nuvoton\sha256_alt.h)(0x62A89A10)
+I (port\nuvoton\sha256_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\sha512.h)(0x694B5F04)
+I (port\nuvoton\sha512_alt.h)(0x62A89A10)
+I (port\nuvoton\sha512_alt_sw.h)(0x62A89A10)
+I (include\psa\crypto_driver_contexts_composites.h)(0x694B5F04)
+I (include\psa\crypto_builtin_composites.h)(0x694B5F04)
+I (include\psa\crypto_extra.h)(0x694B5F04)
+I (include\psa\crypto_compat.h)(0x694B5F04)
+I (include\mbedtls\ecp.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (port\nuvoton\ecp_alt.h)(0x69857395)
+I (port\incConf.h)(0x69857362)
+I (library\psa_crypto_cipher.h)(0x694B5F04)
+I (library\psa_crypto_core.h)(0x694B5F04)
+I (include\psa\crypto_se_driver.h)(0x694B5F04)
+I (library\psa_crypto_driver_wrappers.h)(0x694B5F04)
+I (library\psa_crypto_hash.h)(0x694B5F04)
+I (library\md_wrap.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (library\psa_crypto_mac.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\psa_crypto_driver_wrappers.h)(0x694B5F04)()
+F (.\library\psa_crypto_ecp.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_ecp.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\psa_crypto_ecp.h)(0x694B5F04)()
+F (.\library\psa_crypto_hash.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_hash.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\psa_crypto_hash.h)(0x694B5F04)()
+F (.\library\psa_crypto_invasive.h)(0x694B5F04)()
+F (.\library\psa_crypto_its.h)(0x694B5F04)()
+F (.\library\psa_crypto_mac.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_mac.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\psa_crypto_mac.h)(0x694B5F04)()
+F (.\library\psa_crypto_random_impl.h)(0x694B5F04)()
+F (.\library\psa_crypto_rsa.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_rsa.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\psa_crypto_rsa.h)(0x694B5F04)()
+F (.\library\psa_crypto_se.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_se.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\psa_crypto_se.h)(0x694B5F04)()
+F (.\library\psa_crypto_slot_management.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_slot_management.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\psa_crypto_slot_management.h)(0x694B5F04)()
+F (.\library\psa_crypto_storage.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_crypto_storage.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\psa_crypto_storage.h)(0x694B5F04)()
+F (.\library\psa_its_file.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/psa_its_file.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\ripemd160.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ripemd160.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\rsa.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/rsa.o -MMD)
+F (.\library\rsa_alt_helpers.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/rsa_alt_helpers.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\rsa.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (include\mbedtls\bignum.h)(0x694B5F04)
+I (include\mbedtls\md.h)(0x694B5F04)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (library\rsa_alt_helpers.h)(0x694B5F04)
+F (.\library\rsa_alt_helpers.h)(0x694B5F04)()
+F (.\library\sha1.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/sha1.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\sha1.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (port\nuvoton\sha1_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha1_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\sha256.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/sha256.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\sha256.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (port\nuvoton\sha256_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha256_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\sha512.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/sha512.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\sha512.h)(0x694B5F04)
+I (include\mbedtls\private_access.h)(0x694B5F04)
+I (port\nuvoton\sha512_alt.h)(0x62A89A10)
+I (port\nuvoton\sha_alt_hw.h)(0x6365E029)
+I (port\nuvoton\sha512_alt_sw.h)(0x62A89A10)
+I (include\mbedtls\platform_util.h)(0x694B5F04)
+I (include\mbedtls\error.h)(0x694B5F04)
+I (include\mbedtls\platform.h)(0x694B5F04)
+F (.\library\ssl_cache.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_cache.o -MMD)
+F (.\library\ssl_ciphersuites.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_ciphersuites.o -MMD)
+F (.\library\ssl_cli.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_cli.o -MMD)
+F (.\library\ssl_cookie.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_cookie.o -MMD)
+F (.\library\ssl_debug_helpers_generated.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_debug_helpers_generated.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\ssl_debug_helpers_generated.h)(0x694B5F04)()
+F (.\library\ssl_misc.h)(0x694B5F04)()
+F (.\library\ssl_msg.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_msg.o -MMD)
+F (.\library\ssl_srv.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_srv.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\ssl_ticket.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_ticket.o -MMD)
+F (.\library\ssl_tls.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_tls.o -MMD)
+F (.\library\ssl_tls13_client.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_tls13_client.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\ssl_tls13_generic.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_tls13_generic.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\ssl_tls13_keys.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_tls13_keys.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\ssl_tls13_keys.h)(0x694B5F04)()
+F (.\library\ssl_tls13_server.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/ssl_tls13_server.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\threading.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/threading.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\timing.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/timing.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+F (.\library\version.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/version.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\version.h)(0x694B5F04)
+F (.\library\version_features.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/version_features.o -MMD)
+I (library\common.h)(0x694B5F04)
+I (include\mbedtls\build_info.h)(0x69857072)
+I (port\nuvoton\m467_mbedtls_config.h)(0x698573FE)
+I (..\FreeRTOS\Source\include\FreeRTOS.h)(0x694B5F02)
+I (..\FreeRTOS\Source\FreeRTOSConfig.h)(0x69840595)
+I (..\FreeRTOS\Source\include\projdefs.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\portable.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\deprecated_definitions.h)(0x694B5F02)
+I (..\FreeRTOS\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x694B5F02)
+I (..\FreeRTOS\Source\include\mpu_wrappers.h)(0x694B5F02)
+I (include\mbedtls\check_config.h)(0x694B5F04)
+I (include\mbedtls\version.h)(0x694B5F04)
+F (.\library\x509.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/x509.o -MMD)
+F (.\library\x509_create.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/x509_create.o -MMD)
+F (.\library\x509_crl.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/x509_crl.o -MMD)
+F (.\library\x509_crt.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/x509_crt.o -MMD)
+F (.\library\x509_csr.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/x509_csr.o -MMD)
+F (.\library\x509write_crt.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/x509write_crt.o -MMD)
+F (.\library\x509write_csr.c)(0x694B5F04)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char-gdwarf-4 -O0 -ffunction-sections -Wall -Wextra -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./include -I ./port -I ./port/nuvoton -I ./library -I ../FreeRTOS/Source/include -I ../FreeRTOS/Source/portable/GCC/ARM_CM4F -I ../FreeRTOS/Source-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="541" -DMBEDTLS_CONFIG_FILE=" \"m467_mbedtls_config.h\" "-o ./objects/x509write_csr.o -MMD)
+F (.\port\nuvoton\m467_mbedtls_config.h)(0x698573FE)()
+F (.\port\nuvoton\aes_alt.h)(0x62A89A10)()
+F (.\port\nuvoton\des_alt.h)(0x62A89A10)()
+F (.\port\nuvoton\sha_alt_hw.h)(0x6365E029)()
+F (.\port\nuvoton\sha1_alt.h)(0x62A89A10)()
+F (.\port\nuvoton\sha1_alt_sw.h)(0x62A89A10)()
+F (.\port\nuvoton\sha256_alt.h)(0x62A89A10)()
+F (.\port\nuvoton\sha256_alt_sw.h)(0x62A89A10)()
+F (.\port\nuvoton\sha512_alt.h)(0x62A89A10)()
+F (.\port\nuvoton\sha512_alt_sw.h)(0x62A89A10)()
+F (.\port\incConf.h)(0x69857362)()

@@ -1,0 +1,6 @@
+--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c
+-gdwarf-4 -D__MICROLIB -MMD
+-IC:/Users/YuShun/AppData/Local/Arm/Packs/Nuvoton/NuMicroM4_DFP/1.0.0/Device/M460/Include
+-IC:/Keil_v5/ARM/CMSIS/Include
+-D__UVISION_VERSION=541
+-o ./objects/startup_m460.o "../../Library/Device/Nuvoton/m460/Source/ARM/startup_m460.S"

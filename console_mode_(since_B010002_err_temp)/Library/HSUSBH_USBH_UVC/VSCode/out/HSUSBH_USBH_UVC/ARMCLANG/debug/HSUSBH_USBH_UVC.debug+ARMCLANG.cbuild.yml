@@ -1,0 +1,126 @@
+build:
+  generated-by: csolution version 2.12.0
+  solution: ../../../../HSUSBH_USBH_UVC.csolution.yml
+  project: ../../../../HSUSBH_USBH_UVC.cproject.yml
+  context: HSUSBH_USBH_UVC.debug+ARMCLANG
+  compiler: AC6
+  device: Nuvoton::M467HJHAE
+  device-pack: Nuvoton::NuMicroM4_DFP@1.0.1
+  processor:
+    fpu: sp
+    core: Cortex-M4
+  packs:
+    - pack: Nuvoton::NuMicroM4_DFP@1.0.1
+      path: ${CMSIS_PACK_ROOT}/Nuvoton/NuMicroM4_DFP/1.0.1
+  optimize: debug
+  misc:
+    ASM:
+      - -D__MICROLIB
+      - -DStack_Size=0x800
+    C:
+      - -std=c99
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -fdata-sections
+      - -D__MICROLIB
+      - -o0
+      - -gdwarf-4
+      - -fno-inline
+    Link:
+      - --library_type=microlib
+      - --map
+      - --load_addr_map_info
+      - --symbols
+      - --info sizes
+      - --info totals
+      - --entry Reset_Handler
+      - --summary_stderr
+      - --info summarysizes
+      - --diag_suppress=6314
+  add-path:
+    - ../../../../../../../../Library/CMSIS/Include
+    - ../../../../../../../../Library/Device/Nuvoton/m460/Include
+    - ../../../../../../../../Library/StdDriver/inc
+    - ../../../../../../../../Library/UsbHostLib/inc
+    - ../../../../../../../../ThirdParty/FatFs/source
+    - ${CMSIS_PACK_ROOT}/Nuvoton/NuMicroM4_DFP/1.0.1/Device/M460/Include
+  add-path-asm:
+    - ${CMSIS_PACK_ROOT}/Nuvoton/NuMicroM4_DFP/1.0.1/Device/M460/Include
+  output-dirs:
+    intdir: ../../../../tmp
+    outdir: .
+    rtedir: ../../../../RTE
+  output:
+    - type: bin
+      file: HSUSBH_USBH_UVC.bin
+    - type: elf
+      file: HSUSBH_USBH_UVC.axf
+  linker:
+    script: ../../../../RTE/Device/M467HJHAE/ac6_linker_script.sct.src
+    regions: ../../../../RTE/Device/M467HJHAE/regions_M467HJHAE.h
+  groups:
+    - group: CMSIS
+      files:
+        - file: ../../../../../../../../Library/Device/Nuvoton/m460/Source/ARM/startup_m460.S
+          category: sourceAsm
+        - file: ../../../../../../../../Library/Device/Nuvoton/m460/Source/system_m460.c
+          category: sourceC
+          define:
+            - HBI_ENABLE: 2
+    - group: User
+      files:
+        - file: ../../../../../main.c
+          category: sourceC
+        - file: ../../../../../diskio.c
+          category: sourceC
+        - file: ../../../../../sdglue.c
+          category: sourceC
+    - group: Library
+      files:
+        - file: ../../../../../../../../Library/StdDriver/src/retarget.c
+          category: sourceC
+        - file: ../../../../../../../../Library/StdDriver/src/clk.c
+          category: sourceC
+        - file: ../../../../../../../../Library/StdDriver/src/sys.c
+          category: sourceC
+        - file: ../../../../../../../../Library/StdDriver/src/uart.c
+          category: sourceC
+        - file: ../../../../../../../../Library/StdDriver/src/gpio.c
+          category: sourceC
+        - file: ../../../../../../../../Library/StdDriver/src/hbi.c
+          category: sourceC
+        - file: ../../../../../../../../Library/StdDriver/src/sdh.c
+          category: sourceC
+    - group: UsbHostLib
+      files:
+        - file: ../../../../../../../../Library/UsbHostLib/src_core/ehci.c
+          category: sourceC
+        - file: ../../../../../../../../Library/UsbHostLib/src_core/ehci_iso.c
+          category: sourceC
+        - file: ../../../../../../../../Library/UsbHostLib/src_core/hub.c
+          category: sourceC
+        - file: ../../../../../../../../Library/UsbHostLib/src_core/mem_alloc.c
+          category: sourceC
+        - file: ../../../../../../../../Library/UsbHostLib/src_core/ohci.c
+          category: sourceC
+        - file: ../../../../../../../../Library/UsbHostLib/src_core/usb_core.c
+          category: sourceC
+    - group: UsbHostLib_UVC
+      files:
+        - file: ../../../../../../../../Library/UsbHostLib/src_uvc/uvc_core.c
+          category: sourceC
+        - file: ../../../../../../../../Library/UsbHostLib/src_uvc/uvc_driver.c
+          category: sourceC
+        - file: ../../../../../../../../Library/UsbHostLib/src_uvc/uvc_parser.c
+          category: sourceC
+    - group: FatFs
+      files:
+        - file: ../../../../../../../../ThirdParty/FatFs/source/ff.c
+          category: sourceC
+  licenses:
+    - license: <unknown>
+      packs:
+        - pack: Nuvoton::NuMicroM4_DFP@1.0.1

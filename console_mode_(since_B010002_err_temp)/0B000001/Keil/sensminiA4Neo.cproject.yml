@@ -1,0 +1,400 @@
+project:
+  packs:
+    - pack: Nuvoton::NuMicroM4_DFP@^1.0.1
+  setups:
+    - setup: Options for Release
+      processor:
+        fpu: sp
+      add-path:
+        - ../Src/headers
+        - ../../Library/StdDriver/inc
+        - ../Src
+        - ../../ThirdParty/FreeRTOS/Source
+        - ../../ThirdParty/FreeRTOS/Source/include
+        - ../../ThirdParty/FreeRTOS/Source/portable/GCC/ARM_CM4F
+        - ../../Library/Device/Nuvoton/m460/Include
+        - ../../Library/CMSIS/Include
+        - ../../Kernel/OSA
+        - ../../ThirdParty/lwip/src/include
+        - ../../ThirdParty/lwip/ports/include
+        - ../../ThirdParty/littleFs
+        - ../../Library/UsbHostLib/inc
+        - ../Src/FatFs/src
+        - ../../ThirdParty/mbedTLS/include
+        - ../../ThirdParty/mbedTLS/port
+        - ../../ThirdParty/mbedTLS/port/nuvoton
+      debug: "on"
+      define:
+        - SENSMINIA4_NEO
+        - RELEASE_VERSION
+        - NUVOTON
+        - HBI_ENABLE: "1"
+        - SUPPORT_USB_HOST
+        - TCP_CLIENT_CFG_MBEDTLS_ENABLE
+        - HTTPSRV_CFG_MBEDTLS_ENABLE: "1"
+        - __MICROLIB
+      define-asm:
+        - __MICROLIB
+      misc:
+        - C:
+            - -std=c11
+          C-CPP:
+            - -fno-rtti
+            - -funsigned-char
+            - -fshort-enums
+            - -fshort-wchar
+            - -fno-function-sections
+            - -Wno-packed
+            - -Wno-missing-variable-declarations
+            - -Wno-missing-prototypes
+            - -Wno-missing-noreturn
+            - -Wno-sign-conversion
+            - -Wno-nonportable-include-path
+            - -Wno-reserved-id-macro
+            - -Wno-unused-macros
+            - -Wno-documentation-unknown-command
+            - -Wno-documentation
+            - -Wno-license-management
+            - -Wno-parentheses-equality
+          CPP:
+            - -xc++
+            - -std=c++11
+            - -fno-exceptions
+          ASM:
+            - -masm=auto
+          Link:
+            - --library_type=microlib
+            - --map
+            - --load_addr_map_info
+            - --xref
+            - --callgraph
+            - --symbols
+            - --info sizes
+            - --info totals
+            - --info unused
+            - --info veneers
+            - --strict
+            - --summary_stderr
+            - --info summarysizes
+  linker:
+    - script: sensminiA4Neo.sct
+  groups:
+    - group: System
+      files:
+        - file: ../../Library/Device/Nuvoton/m460/Source/system_m460.c
+        - file: ../../Library/Device/Nuvoton/m460/Source/ARM/startup_m460.S
+          misc:
+            - ASM:
+                - -masm=auto
+    - group: Sys_Headers
+      files:
+        - file: ../Src/compiler_settings.h
+        - file: ../Src/headers/boardDef.h
+        - file: ../Src/headers/sensminiCfg.h
+        - file: ../Src/headers/taskDef.h
+        - file: ../Src/headers/sysStruct.h
+        - file: ../Src/headers/sysConfig.h
+        - file: ../Src/headers/sysEnum.h
+        - file: ../Src/headers/networkStruct.h
+        - file: ../Src/headers/networkEnum.h
+        - file: ../Src/headers/networkConfig.h
+        - file: ../Src/headers/deviceStruct.h
+        - file: ../Src/deviceEnum.h
+        - file: ../Src/deviceConfig.h
+        - file: ../Src/headers/gpioEnum.h
+        - file: ../Src/headers/mqttEnum.h
+    - group: App
+      files:
+        - file: ../Src/main.c
+        - file: ../Src/sensSystem.c
+        - file: ../Src/sensSystem.h
+        - file: ../Src/rtcDateTime.c
+        - file: ../Src/rtcDateTime.h
+        - file: ../Src/sensCommon.c
+        - file: ../Src/sensCommon.h
+        - file: ../Src/powerCtrl.c
+        - file: ../Src/powerCtrl.h
+        - file: ../Src/sdCardTask.c
+        - file: ../Src/sdCardTask.h
+        - file: ../Src/sensDev.c
+        - file: ../Src/sensDev.h
+        - file: ../Src/systemCtrl.c
+        - file: ../Src/param.c
+        - file: ../Src/param.h
+        - file: ../Src/physicalQuantity.c
+        - file: ../Src/physicalQuantity.h
+        - file: ../Src/systemTimer.c
+        - file: ../Src/systemTimer.h
+        - file: ../Src/Ini.c
+        - file: ../Src/Ini2.c
+        - file: ../Src/Ini.h
+        - file: ../Src/Ini2.h
+        - file: ../Src/AutoDataSync.c
+        - file: ../Src/AutoDataSync.h
+        - file: ../Src/expanderGpioTask.c
+        - file: ../Src/expanderGpioTask.h
+    - group: CJSON
+      files:
+        - file: ../Src/cJSON/cJSON.c
+        - file: ../Src/cJSON/cJSON_Utils.c
+        - file: ../Src/cJSON/cJSON.h
+        - file: ../Src/cJSON/cJSON_Utils.h
+    - group: App_Library
+      files:
+        - file: ../../ThirdParty/FreeRTOS/Objects/freeRTOSLib.lib
+        - file: ../../ThirdParty/lwip/Objects/lwipLib.lib
+        - file: ../../ThirdParty/mbedTLS/Objects/mbedTls.lib
+    - group: M467_StdLib
+      files:
+        - file: ../../Library/StdDriver/src/retarget.c
+        - file: ../../Library/StdDriver/src/clk.c
+        - file: ../../Library/StdDriver/src/sys.c
+        - file: ../../Library/StdDriver/src/uart.c
+        - file: ../../Library/StdDriver/src/gpio.c
+        - file: ../../Library/StdDriver/src/hbi.c
+        - file: ../../Library/StdDriver/src/rtc.c
+        - file: ../../Library/StdDriver/src/qspi.c
+        - file: ../../Library/StdDriver/src/spi.c
+        - file: ../../Library/StdDriver/src/pdma.c
+        - file: ../../Library/StdDriver/src/i2c.c
+        - file: ../../Library/StdDriver/src/sdh.c
+        - file: ../../Library/StdDriver/src/fmc.c
+        - file: ../../Library/StdDriver/src/crypto.c
+        - file: ../../Library/StdDriver/src/rng.c
+        - file: ../../Library/StdDriver/src/keystore.c
+        - file: ../../Library/StdDriver/src/eadc.c
+        - file: ../../Library/StdDriver/src/timer.c
+        - file: ../../Library/StdDriver/src/wdt.c
+    - group: OSA
+      files:
+        - file: ../../Kernel/OSA/osa.c
+        - file: ../../Kernel/OSA/osa.h
+    - group: FSA
+      files:
+        - file: ../Src/FS/FSA_FS.c
+        - file: ../Src/FS/fsCtrl.c
+        - file: ../Src/FS/FSA_FS.h
+        - file: ../Src/FS/fsCtrl.h
+    - group: HAL
+      files:
+        - file: ../Src/HAL/HAL_CONFIG.h
+        - file: ../Src/HAL/HAL_UART.h
+        - file: ../Src/HAL/HAL_UART.c
+    - group: EMAC
+      files:
+        - file: ../Src/drv_emac/m460_emac.c
+        - file: ../Src/drv_emac/m460_mii.c
+        - file: ../Src/drv_emac/synopGMAC_Dev.c
+        - file: ../Src/drv_emac/synopGMAC_network_interface.c
+        - file: ../Src/drv_emac/synopGMAC_plat.c
+        - file: ../Src/drv_emac/ethernetif.c
+    - group: NET_APP
+      files:
+        - file: ../../ThirdParty/lwip/src/apps/sntp/sntp.c
+        - file: ../Src/network/dnsService.c
+        - file: ../Src/network/dnsService.h
+        - file: ../Src/network/ethernetService.c
+        - file: ../Src/network/ethernetService.h
+        - file: ../Src/network/networkProcessTask.c
+        - file: ../Src/network/networkProcessTask.h
+        - file: ../Src/network/netApp.h
+        - file: ../Src/network/iotProcessTask.c
+        - file: ../Src/network/iotProcessTask.h
+        - file: ../Src/network/iotProcessApp.c
+        - file: ../Src/network/iotProcessApp.h
+        - file: ../Src/network/cmux.c
+        - file: ../Src/network/cmux.h
+        - file: ../Src/network/modem_ppp.c
+        - file: ../Src/network/modem_ppp.h
+        - file: ../Src/network/networkProcessApp.c
+        - file: ../Src/network/networkProcessApp.h
+        - file: ../Src/network/tcpTls.c
+        - file: ../Src/network/tcpTls.h
+        - file: ../Src/network/httpsrv/web/tfs_data_A4Neo.c
+        - file: ../Src/network/cgi.c
+        - file: ../Src/network/cgi.h
+    - group: NET_PROTOCOL
+      files:
+        - file: ../Src/network/Protocol/serverCmdProcessTask.c
+        - file: ../Src/network/Protocol/serverCmdProcessTask.h
+        - file: ../Src/network/Protocol/serverProtocol.h
+        - file: ../Src/network/Protocol/serverCmdProcessApp.c
+        - file: ../Src/network/Protocol/serverCmdProcessApp.h
+        - file: ../Src/network/Protocol/HttpClientProtocol.c
+        - file: ../Src/network/Protocol/HttpClientProtocol.h
+        - file: ../Src/network/Protocol/ioaProt.c
+        - file: ../Src/network/Protocol/ioaProt.h
+        - file: ../Src/network/Protocol/SenstalkProtocol.c
+        - file: ../Src/network/Protocol/SenstalkProtocol.h
+        - file: ../Src/network/Protocol/SenstalkMqttProtocol.c
+        - file: ../Src/network/Protocol/SenstalkMqttProtocol.h
+        - file: ../Src/network/Protocol/MqttProtocolProcess.c
+        - file: ../Src/network/Protocol/MqttProtocolProcess.h
+        - file: ../Src/network/Protocol/SensscfgMqttProtocol.c
+        - file: ../Src/network/Protocol/SensscfgMqttProtocol.h
+    - group: LittleFs
+      files:
+        - file: ../../ThirdParty/littleFs/lfs.c
+        - file: ../../ThirdParty/littleFs/lfs_util.c
+        - file: ../Src/littleFs/littleFsPort.c
+        - file: ../Src/littleFs/littleFsPort.h
+        - file: ../../ThirdParty/littleFs/lfs.h
+        - file: ../../ThirdParty/littleFs/lfs_util.h
+    - group: Driver
+      files:
+        - file: ../Src/driver/spiNorFalsh.c
+        - file: ../Src/driver/spiNorFlash.h
+        - file: ../Src/driver/SENS_SPI.c
+        - file: ../Src/driver/SENS_SPI.h
+        - file: ../Src/driver/i2cDrv.c
+        - file: ../Src/driver/i2cDrv.h
+        - file: ../Src/driver/s35710WakeupTimer.c
+        - file: ../Src/driver/s35710WakeupTimer.h
+        - file: ../Src/driver/PCAL6416GpioExpander.c
+        - file: ../Src/driver/PCAL6416GpioExpander.h
+        - file: ../Src/driver/tcn75a.c
+        - file: ../Src/driver/tcn75a.h
+        - file: ../Src/driver/i2cEeprom.c
+        - file: ../Src/driver/i2cEeprom.h
+        - file: ../Src/driver/ad7124Adc.c
+        - file: ../Src/driver/ad7124Adc.h
+        - file: ../Src/driver/uartDrv.c
+        - file: ../Src/driver/uartDrv.h
+    - group: USB_HOST_CORE
+      files:
+        - file: ../../Library/UsbHostLib/src_core/ehci.c
+        - file: ../../Library/UsbHostLib/src_core/ehci_iso.c
+        - file: ../../Library/UsbHostLib/src_core/hub.c
+        - file: ../../Library/UsbHostLib/src_core/mem_alloc.c
+        - file: ../../Library/UsbHostLib/src_core/ohci.c
+        - file: ../../Library/UsbHostLib/src_core/usb_core.c
+    - group: USB_HOST_CLASS
+      files:
+        - file: ../../Library/UsbHostLib/src_cdc/cdc_core.c
+        - file: ../../Library/UsbHostLib/src_cdc/cdc_driver.c
+        - file: ../../Library/UsbHostLib/src_cdc/cdc_parser.c
+        - file: ../../Library/UsbHostLib/src_uvc/uvc_core.c
+        - file: ../../Library/UsbHostLib/src_uvc/uvc_driver.c
+        - file: ../../Library/UsbHostLib/src_uvc/uvc_parser.c
+    - group: USB_HOST_PROCESS
+      files:
+        - file: ../Src/usbHost/usbHostTask.c
+        - file: ../Src/usbHost/usbHostTask.h
+    - group: FAT_FS
+      files:
+        - file: ../Src/FatFs/src/diskio.c
+        - file: ../Src/FatFs/src/ff.c
+        - file: ../Src/FatFs/src/ffsystem.c
+        - file: ../Src/FatFs/src/ffunicode.c
+        - file: ../Src/FatFs/src/SDGlue.c
+        - file: ../Src/FatFs/src/ff.h
+        - file: ../Src/FatFs/src/ffconf.h
+        - file: ../Src/FatFs/src/ffsConfig.h
+        - file: ../Src/FatFs/src/integer.h
+        - file: ../Src/FatFs/src/diskio.h
+    - group: SENSORS
+      files:
+        - file: ../Src/sensors/cameraUvcSensor.c
+        - file: ../Src/sensors/cameraUvcSensor.h
+        - file: ../Src/sensors/sensorTask.c
+        - file: ../Src/sensors/sensorTask.h
+        - file: ../Src/sensors/sensorApp.h
+        - file: ../Src/sensors/onboardTempSensor.c
+        - file: ../Src/sensors/onboardTempSensor.h
+        - file: ../Src/sensors/aiSensor.c
+        - file: ../Src/sensors/aiSensor.h
+        - file: ../Src/sensors/modbusApp.c
+        - file: ../Src/sensors/modbusApp.h
+        - file: ../Src/sensors/dconApp.c
+        - file: ../Src/sensors/dconApp.h
+        - file: ../Src/sensors/radarSensor.c
+        - file: ../Src/sensors/radarSensor.h
+        - file: ../Src/sensors/voltSense.c
+        - file: ../Src/sensors/voltSense.h
+        - file: ../Src/sensors/displayPanelSensor.c
+        - file: ../Src/sensors/displayPanelSensor.h
+    - group: MbedTLS_PORT
+      files:
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/aes_alt.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/des_alt.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/ecp_internal_alt.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/sha_alt_hw.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/sha1_alt.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/sha1_alt_sw.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/sha256_alt.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/sha256_alt_sw.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/sha512_alt.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/sha512_alt_sw.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/cryptoMisc.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/cryptoMisc.h
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/ecp_alt.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/ecp_alt.h
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/ecp_curves_alt.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/crypto_ecc_hw.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/crypto_rsa_hw.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/ecp_helper.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/rsa_alt.c
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/crypto_rsa_hw.h
+        - file: ../../ThirdParty/mbedTLS/port/nuvoton/rsa_alt.h
+    - group: MQTT_LIB
+      files:
+        - file: ../Src/network/mqtt/mqtt_client.c
+        - file: ../Src/network/mqtt/mqtt_packet.c
+        - file: ../Src/network/mqtt/mqtt_socket.c
+        - file: ../Src/network/mqttclientTask.c
+        - file: ../Src/network/mqtt/mqttConfig.c
+        - file: ../Src/network/mqtt/mqttnet.c
+        - file: ../Src/network/mqttclientTask.h
+        - file: ../Src/network/mqtt/mqtt_client.h
+        - file: ../Src/network/mqtt/mqtt_packet.h
+        - file: ../Src/network/mqtt/mqtt_socket.h
+        - file: ../Src/network/mqtt/mqtt_types.h
+        - file: ../Src/network/mqtt/mqttConfig.h
+        - file: ../Src/network/mqtt/mqttnet.h
+        - file: ../Src/network/mqtt/options.h
+        - file: ../Src/network/mqtt/version.h
+        - file: ../Src/network/mqtt/visibility.h
+        - file: ../Src/network/mqtt/vs_settings.h
+    - group: HTTP_SERVER
+      files:
+        - file: ../Src/network/httpsrv/httpsrv.c
+        - file: ../Src/network/httpsrv/httpsrv_base64.c
+        - file: ../Src/network/httpsrv/httpsrv_fs.c
+        - file: ../Src/network/httpsrv/httpsrv_script.c
+        - file: ../Src/network/httpsrv/httpsrv_sha1.c
+        - file: ../Src/network/httpsrv/httpsrv_supp.c
+        - file: ../Src/network/httpsrv/httpsrv_task.c
+        - file: ../Src/network/httpsrv/httpsrv_tls.c
+        - file: ../Src/network/httpsrv/httpsrv_utf8.c
+        - file: ../Src/network/httpsrv/httpsrv_ws.c
+        - file: ../Src/network/httpsrv/httpsrv_ws_api.c
+        - file: ../Src/network/httpsrv/httpsrv.h
+        - file: ../Src/network/httpsrv/httpsrv_base64.h
+        - file: ../Src/network/httpsrv/httpsrv_config.h
+        - file: ../Src/network/httpsrv/httpsrv_fs.h
+        - file: ../Src/network/httpsrv/httpsrv_port.h
+        - file: ../Src/network/httpsrv/httpsrv_prv.h
+        - file: ../Src/network/httpsrv/httpsrv_script.h
+        - file: ../Src/network/httpsrv/httpsrv_sha1.h
+        - file: ../Src/network/httpsrv/httpsrv_supp.h
+        - file: ../Src/network/httpsrv/httpsrv_tls.h
+        - file: ../Src/network/httpsrv/httpsrv_utf8.h
+        - file: ../Src/network/httpsrv/httpsrv_ws.h
+        - file: ../Src/network/httpsrv/httpsrv_ws_prv.h
+    - group: MODBUS
+      files:
+        - file: ../Src/sensors/modbus/modbus.c
+        - file: ../Src/sensors/modbus/modbus-data.c
+        - file: ../Src/sensors/modbus/modbus-rtu.c
+        - file: ../Src/sensors/modbus/modbus-tcp.c
+        - file: ../Src/sensors/modbus/modbus.h
+        - file: ../Src/sensors/modbus/modbus-private.h
+        - file: ../Src/sensors/modbus/modbus-rtu.h
+        - file: ../Src/sensors/modbus/modbus-rtu-private.h
+        - file: ../Src/sensors/modbus/modbus-tcp.h
+        - file: ../Src/sensors/modbus/modbus-tcp-private.h
+        - file: ../Src/sensors/modbus/modbus-version.h
+    - group: Peripheral
+      files:
+        - file: ../Src/peripheral/rs485.c
+        - file: ../Src/peripheral/rs485.h

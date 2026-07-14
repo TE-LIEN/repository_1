@@ -1,0 +1,138 @@
+project:
+  packs:
+    - pack: Nuvoton::NuMicroM4_DFP@^1.0.1
+  setups:
+    - setup: Options for LWIP
+      processor:
+        fpu: sp
+      add-path:
+        - ports/include
+        - src/include
+        - ../FreeRTOS/Source/include
+        - ../FreeRTOS/Source
+        - ../FreeRTOS/Source/portable/GCC/ARM_CM4F
+      debug: "on"
+      output:
+        type: lib
+      misc:
+        - C:
+            - -std=c99
+          C-CPP:
+            - -fno-rtti
+            - -funsigned-char
+            - -fshort-enums
+            - -fshort-wchar
+            - -ffunction-sections
+            - -Wall
+            - -Wextra
+            - -Wno-packed
+            - -Wno-reserved-id-macro
+            - -Wno-unused-macros
+            - -Wno-documentation-unknown-command
+            - -Wno-documentation
+            - -Wno-license-management
+            - -Wno-parentheses-equality
+          CPP:
+            - -xc++
+            - -std=c++11
+            - -fno-exceptions
+          ASM:
+            - -masm=auto
+          Link:
+            - --map
+            - --load_addr_map_info
+            - --xref
+            - --callgraph
+            - --symbols
+            - --info sizes
+            - --info totals
+            - --info unused
+            - --info veneers
+            - --strict
+            - --summary_stderr
+            - --info summarysizes
+  linker:
+    - script: lwipLib_LWIP.sct
+  groups:
+    - group: PORT
+      files:
+        - file: ports/sys_arch.c
+        - file: ports/include/lwipopts.h
+    - group: CORE
+      files:
+        - file: src/core/altcp.c
+        - file: src/core/altcp_alloc.c
+        - file: src/core/altcp_tcp.c
+        - file: src/core/def.c
+        - file: src/core/dns.c
+        - file: src/core/inet_chksum.c
+        - file: src/core/init.c
+        - file: src/core/ip.c
+        - file: src/core/mem.c
+        - file: src/core/memp.c
+        - file: src/core/netif.c
+        - file: src/core/pbuf.c
+        - file: src/core/raw.c
+        - file: src/core/stats.c
+        - file: src/core/sys.c
+        - file: src/core/tcp.c
+        - file: src/core/tcp_in.c
+        - file: src/core/tcp_out.c
+        - file: src/core/timeouts.c
+        - file: src/core/udp.c
+        - file: src/core/ipv4/autoip.c
+        - file: src/core/ipv4/dhcp.c
+        - file: src/core/ipv4/etharp.c
+        - file: src/core/ipv4/icmp.c
+        - file: src/core/ipv4/igmp.c
+        - file: src/core/ipv4/ip4.c
+        - file: src/core/ipv4/ip4_addr.c
+        - file: src/core/ipv4/ip4_frag.c
+    - group: NETIF
+      files:
+        - file: src/netif/bridgeif.c
+        - file: src/netif/bridgeif_fdb.c
+        - file: src/netif/ethernet.c
+        - file: src/netif/lowpan6.c
+        - file: src/netif/lowpan6_ble.c
+        - file: src/netif/lowpan6_common.c
+        - file: src/netif/slipif.c
+        - file: src/netif/zepif.c
+    - group: API
+      files:
+        - file: src/api/api_lib.c
+        - file: src/api/api_msg.c
+        - file: src/api/err.c
+        - file: src/api/if_api.c
+        - file: src/api/netbuf.c
+        - file: src/api/netdb.c
+        - file: src/api/netifapi.c
+        - file: src/api/sockets.c
+        - file: src/api/tcpip.c
+    - group: PPP
+      files:
+        - file: src/netif/ppp/auth.c
+        - file: src/netif/ppp/ccp.c
+        - file: src/netif/ppp/chap_ms.c
+        - file: src/netif/ppp/chap-md5.c
+        - file: src/netif/ppp/chap-new.c
+        - file: src/netif/ppp/demand.c
+        - file: src/netif/ppp/eap.c
+        - file: src/netif/ppp/ecp.c
+        - file: src/netif/ppp/eui64.c
+        - file: src/netif/ppp/fsm.c
+        - file: src/netif/ppp/ipcp.c
+        - file: src/netif/ppp/ipv6cp.c
+        - file: src/netif/ppp/lcp.c
+        - file: src/netif/ppp/magic.c
+        - file: src/netif/ppp/mppe.c
+        - file: src/netif/ppp/multilink.c
+        - file: src/netif/ppp/ppp.c
+        - file: src/netif/ppp/pppapi.c
+        - file: src/netif/ppp/pppcrypt.c
+        - file: src/netif/ppp/pppoe.c
+        - file: src/netif/ppp/pppol2tp.c
+        - file: src/netif/ppp/pppos.c
+        - file: src/netif/ppp/upap.c
+        - file: src/netif/ppp/utils.c
+        - file: src/netif/ppp/vj.c
